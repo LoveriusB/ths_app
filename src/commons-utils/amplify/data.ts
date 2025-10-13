@@ -1,5 +1,5 @@
-import { Schema } from '@ths-monorepo/amplify-ths';
 import { Client } from 'aws-amplify/api';
+import { type Schema } from '../../../amplify/backend'
 
 const filters = {
   registration: { stripePaymentStatus: { eq: 'completed' } },
