@@ -1,9 +1,9 @@
+import { Amplify } from "aws-amplify";
 import { StrictMode } from "react";
 import * as ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-
 import WebFontLoader from "webfontloader";
-
+import amplifyConfig from "../amplify_outputs.json";
 import App from "./App";
 import { SelectedThemeContextProvider } from "./contexts/selectedThemeContext.tsx/SelectedThemeProvider";
 import { UserContextProvider } from "./contexts/userContext/UserProvider";
@@ -20,6 +20,8 @@ WebFontLoader.load({
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
+Amplify.configure(amplifyConfig);
 
 root.render(
   <StrictMode>
