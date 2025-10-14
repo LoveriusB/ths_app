@@ -1,40 +1,73 @@
-import { useEffect, useState } from "react";
-import type { Schema } from "../amplify/data/resource";
-import { generateClient } from "aws-amplify/data";
+import { Grid } from "@mui/material";
 
-const client = generateClient<Schema>();
+import { Routes, Route } from "react-router-dom";
+import { useSelectedTheme } from "./hooks/useSelectedTheme";
+import {
+  Admin,
+  Cancel,
+  Home,
+  NotFound,
+  Success,
+  Terminal,
+  ThemeWrapper,
+} from "./components";
 
-function App() {
-  const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
-
-  useEffect(() => {
-    client.models.Todo.observeQuery().subscribe({
-      next: (data) => setTodos([...data.items]),
-    });
-  }, []);
-
-  function createTodo() {
-    client.models.Todo.create({ content: window.prompt("Todo content") });
-  }
-
+export const App = () => {
+  const { selectedTheme } = useSelectedTheme();
   return (
-    <main>
-      <h1>My todos</h1>
-      <button onClick={createTodo}>+ new</button>
-      <ul>
-        {todos.map((todo) => (
-          <li key={todo.id}>{todo.content}</li>
-        ))}
-      </ul>
-      <div>
-        🥳 App successfully hosted. Try creating a new todo.
-        <br />
-        <a href="https://docs.amplify.aws/react/start/quickstart/#make-frontend-updates">
-          Review next step of this tutorial.
-        </a>
-      </div>
-    </main>
+    <Grid>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <ThemeWrapper theme={selectedTheme}>
+              <Home />
+            </ThemeWrapper>
+          }
+        />
+        <Route
+          path="/admin"
+          element={
+            <ThemeWrapper theme={selectedTheme}>
+              <Admin />
+            </ThemeWrapper>
+          }
+        />
+        <Route
+          path="/terminal"
+          element={
+            <ThemeWrapper theme="dark">
+              <Terminal />
+            </ThemeWrapper>
+          }
+        />
+        <Route
+          path="/success"
+          element={
+            <ThemeWrapper theme={selectedTheme}>
+              <Success />
+            </ThemeWrapper>
+          }
+        />
+        <Route
+          path="/cancel"
+          element={
+            <ThemeWrapper theme={selectedTheme}>
+              <Cancel />
+            </ThemeWrapper>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <ThemeWrapper theme={selectedTheme}>
+              <NotFound />
+            </ThemeWrapper>
+          }
+        />
+      </Routes>
+    </Grid>
   );
-}
+};
 
 export default App;
