@@ -13,7 +13,7 @@ export const ContextLoaderProvider = ({
 }) => {
   const { user } = useUser();
   const { data, isLoading } = useQuery({
-    queryKey: ["data"],
+    queryKey: ["data", user?.userId],
     queryFn: () => fetchAllData(amplifyClient, !isNil(user)),
   });
   if (isLoading) return <div>Chargement des données…</div>;

@@ -36,12 +36,11 @@ export const SignInForm: React.FC<SignInFormProps> = ({ setFormState }) => {
         ) {
           setFormState("changePassword");
         }
-        window.location.reload();
       }}
     >
       {({ isSubmitting }) => (
         <Form>
-          <Typography variant="h4">Admin Sign In</Typography>
+          <Typography variant="h4">Connexion Admin</Typography>
           <Divider />
           <SignInFormContent />
           <Divider />
