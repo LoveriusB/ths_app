@@ -39,6 +39,14 @@ export const BottomDrawer: React.FC<BottomDrawerProps> = () => {
           <Grid width={"80%"}>
             <NoRefundButton buttonProps={{ fullWidth: true }} />
           </Grid>
+          <Typography
+            component={"p"}
+            variant="subtitle2"
+            color="grey.700"
+            textAlign={"center"}
+          >
+            MAJ V2.0.1 : 15/10/2025
+          </Typography>
         </Grid>
 
         <Divider orientation="vertical" />
