@@ -80,14 +80,12 @@ export const PlayersLists: React.FC<PlayersListsProps> = ({ margin }) => {
         <Grid container justifyContent={"center"} spacing={2}>
           {Array.from({ length: amountOfGrids }).map((_, gridIndex) => (
             <Grid
-              container
               size={{
                 xs: 12 / amountOfGrids - 0.5,
                 sm: 12 / amountOfGrids - 0.5,
                 md: 12 / amountOfGrids,
               }}
               key={gridIndex}
-              spacing={2}
             >
               {Object.keys(list[gridIndex]).map((team) => {
                 return (
