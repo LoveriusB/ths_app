@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import WebFontLoader from "webfontloader";
 import amplifyConfig from "../amplify_outputs.json";
 import App from "./App";
+Amplify.configure(amplifyConfig);
 import { SelectedThemeContextProvider } from "./contexts/selectedThemeContext.tsx/SelectedThemeProvider";
 import { UserContextProvider } from "./contexts/userContext/UserProvider";
 import { QueryClientProviders } from "./queryClient";
@@ -20,8 +21,6 @@ WebFontLoader.load({
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
-
-Amplify.configure(amplifyConfig);
 
 root.render(
   <StrictMode>
