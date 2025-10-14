@@ -1,17 +1,17 @@
+import { Typography } from "@mui/material";
+import { isNil } from "lodash";
 import {
   CommandEntry,
   CommandRegistry,
   DependencyContextMap,
   FunctionToExecute,
 } from "../../../../commons-utils";
-import { defaultCommand } from "./default/defaultCommand";
-import { Typography } from "@mui/material";
-import { helpCommand } from "./help/helpCommand";
 import { changeDirectoryCommand } from "./cd/changeDirectoryCommand";
-import { lsCommand } from "./ls/lsCommand";
 import { clearCommand } from "./clear/clearCommand";
+import { defaultCommand } from "./default/defaultCommand";
 import { fileCommand } from "./file/fileComand";
-import { isNil } from "lodash";
+import { helpCommand } from "./help/helpCommand";
+import { lsCommand } from "./ls/lsCommand";
 
 export enum CommandNames {
   HELP = "help",

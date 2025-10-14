@@ -1,5 +1,5 @@
-import { Schema } from "../../../../amplify/backend";
 import { Client } from "aws-amplify/api";
+import { Schema } from "../../../../amplify/backend";
 
 type client = Client<Schema>;
 

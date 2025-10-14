@@ -1,4 +1,4 @@
-import { isNil, isEmpty, isEqual } from 'lodash';
+import { isNil, isEmpty, isEqual } from "lodash";
 
 /**
  * This function checks if the data your gave as parameter is nil or empty
@@ -19,7 +19,7 @@ import { isNil, isEmpty, isEqual } from 'lodash';
  * isNilOrEmpty({name: 'test'}) => false
  */
 
-export const isNilOrEmpty = (data: unknown): data is null | undefined | '' =>
+export const isNilOrEmpty = (data: unknown): data is null | undefined | "" =>
   isNil(data) || isEmpty(data);
 
 /**
@@ -143,7 +143,7 @@ export const splitString = (
   endPos: number
 ): [string, string, string] => {
   if (startPos < 0 || startPos > endPos || endPos > inputString.length + 1) {
-    return ['', '', ''];
+    return ["", "", ""];
   }
 
   const part1 = inputString.substring(0, startPos);
@@ -166,7 +166,7 @@ export const splitString = (
  * fromPixelsToNumber('200.5px') => 200.5
  */
 export const fromPixelsToNumber = (value: string): number => {
-  if (value.endsWith('px')) {
+  if (value.endsWith("px")) {
     return parseFloat(value.slice(0, -2));
   }
   return parseFloat(value);

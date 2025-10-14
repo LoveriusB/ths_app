@@ -6,12 +6,12 @@ import {
   List,
   ListItem,
   Typography,
-} from '@mui/material';
-import { FormValues } from './RegisterDialog';
-import { useState } from 'react';
+} from "@mui/material";
+import { useState } from "react";
+import { FormValues } from "./RegisterDialog";
 
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { PlayerConfirmations } from './PlayerConfirmations';
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { PlayerConfirmations } from "./PlayerConfirmations";
 
 interface PlayersRecapProps {
   values: FormValues;
@@ -50,7 +50,7 @@ export const PlayersRecap: React.FC<PlayersRecapProps> = ({ values }) => {
         flexDirection="column"
         spacing={2}
         marginTop={2}
-        width={'100%'}
+        width={"100%"}
       >
         <PlayerConfirmations />
       </Grid>

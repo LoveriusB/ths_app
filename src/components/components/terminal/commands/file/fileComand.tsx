@@ -1,15 +1,15 @@
 import { Grid } from "@mui/material";
+import { isEmpty } from "lodash";
+import { CommandNames } from "..";
 import {
   CommandHandler,
-  Ok,
-  Info,
-  Warn,
   Done,
+  Info,
+  Ok,
+  Warn,
 } from "../../../../../commons-utils";
 import { ContextError } from "../errors/ContextError";
-import { isEmpty } from "lodash";
 import { WrongArgsError } from "../errors/NoArgsError";
-import { CommandNames } from "..";
 
 export const fileCommand: CommandHandler = (ctx) => {
   const windowContext = ctx.inject?.windowContext;

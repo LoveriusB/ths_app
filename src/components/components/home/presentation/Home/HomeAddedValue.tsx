@@ -1,11 +1,11 @@
-import BakeryDiningOutlinedIcon from '@mui/icons-material/BakeryDiningOutlined';
-import CardGiftcardOutlinedIcon from '@mui/icons-material/CardGiftcardOutlined';
-import CelebrationOutlinedIcon from '@mui/icons-material/CelebrationOutlined';
-import LocalPoliceOutlinedIcon from '@mui/icons-material/LocalPoliceOutlined';
-import WaterDropOutlinedIcon from '@mui/icons-material/WaterDropOutlined';
-import ConfirmationNumberIcon from '@mui/icons-material/ConfirmationNumberOutlined';
+import BakeryDiningOutlinedIcon from "@mui/icons-material/BakeryDiningOutlined";
+import CardGiftcardOutlinedIcon from "@mui/icons-material/CardGiftcardOutlined";
+import CelebrationOutlinedIcon from "@mui/icons-material/CelebrationOutlined";
+import ConfirmationNumberIcon from "@mui/icons-material/ConfirmationNumberOutlined";
+import LocalPoliceOutlinedIcon from "@mui/icons-material/LocalPoliceOutlined";
+import WaterDropOutlinedIcon from "@mui/icons-material/WaterDropOutlined";
 
-import { Card } from '../Card/Card';
+import { Card } from "../Card/Card";
 
 export interface HomeAddedValueProps {
   [key: string]: string;
@@ -14,10 +14,10 @@ export interface HomeAddedValueProps {
 const data = {
   title: "Ce qu'on vous offre",
   topIconnedTexts: [
-    { icon: <WaterDropOutlinedIcon color="primary" />, text: '2L / jour' },
+    { icon: <WaterDropOutlinedIcon color="primary" />, text: "2L / jour" },
     {
       icon: <BakeryDiningOutlinedIcon color="primary" />,
-      text: 'Le petit déjeuner',
+      text: "Le petit déjeuner",
     },
     {
       icon: <CardGiftcardOutlinedIcon color="primary" />,
@@ -40,7 +40,7 @@ const data = {
     {
       icon: <BakeryDiningOutlinedIcon color="primary" />,
       texts: [
-        'Petit-déjeuner offert : histoire de commencer la journée avec le ventre plein et le sourire.',
+        "Petit-déjeuner offert : histoire de commencer la journée avec le ventre plein et le sourire.",
       ],
     },
     {

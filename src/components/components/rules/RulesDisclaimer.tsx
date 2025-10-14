@@ -1,5 +1,5 @@
-import { Grid, Typography } from '@mui/material';
-import WarningAmberOutlinedIcon from '@mui/icons-material/WarningAmberOutlined';
+import WarningAmberOutlinedIcon from "@mui/icons-material/WarningAmberOutlined";
+import { Grid, Typography } from "@mui/material";
 
 export interface RulesDisclaimerProps {
   text: string;

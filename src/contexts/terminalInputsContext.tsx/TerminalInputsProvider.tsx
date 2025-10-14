@@ -1,18 +1,18 @@
 import { isEmpty } from "lodash";
 import {
   ReactNode,
-  useReducer,
-  useState,
-  useRef,
   useCallback,
   useMemo,
+  useReducer,
+  useRef,
+  useState,
 } from "react";
 import { ICommandHistory } from "../../commons-utils";
 import {
   contextReducer,
   initialState,
-  UserContextActions,
   TerminalInputsContext,
+  UserContextActions,
 } from "./TerminalInputsContext";
 
 export const TerminalInputsContextProvider = ({

@@ -1,8 +1,8 @@
 import { Typography } from "@mui/material";
+import { CommandNames } from "..";
 import { CommandHandler, rootFolder } from "../../../../../commons-utils";
 import { ContextError } from "../errors/ContextError";
 import { WrongArgsError } from "../errors/NoArgsError";
-import { CommandNames } from "..";
 
 export const changeDirectoryCommand: CommandHandler = (ctx) => {
   const context = ctx.inject?.folderContext;

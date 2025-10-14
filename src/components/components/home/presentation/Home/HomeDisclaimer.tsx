@@ -1,20 +1,20 @@
-import BackHandOutlinedIcon from '@mui/icons-material/BackHandOutlined';
-import BalanceIcon from '@mui/icons-material/Balance';
-import SickOutlinedIcon from '@mui/icons-material/SickOutlined';
-import ThunderstormOutlinedIcon from '@mui/icons-material/ThunderstormOutlined';
+import BackHandOutlinedIcon from "@mui/icons-material/BackHandOutlined";
+import BalanceIcon from "@mui/icons-material/Balance";
+import SickOutlinedIcon from "@mui/icons-material/SickOutlined";
+import ThunderstormOutlinedIcon from "@mui/icons-material/ThunderstormOutlined";
 
-import { Card } from '../Card/Card';
+import { Card } from "../Card/Card";
 
 export interface HomeDisclaimerProps {
   [key: string]: string;
 }
 
 const data = {
-  title: 'Responsabilités',
+  title: "Responsabilités",
   topIconnedTexts: [
-    { icon: <SickOutlinedIcon color="primary" />, text: 'Blessures' },
-    { icon: <BackHandOutlinedIcon color="primary" />, text: 'Vol' },
-    { icon: <ThunderstormOutlinedIcon color="primary" />, text: 'intempéries' },
+    { icon: <SickOutlinedIcon color="primary" />, text: "Blessures" },
+    { icon: <BackHandOutlinedIcon color="primary" />, text: "Vol" },
+    { icon: <ThunderstormOutlinedIcon color="primary" />, text: "intempéries" },
   ],
   cardListItems: [
     {
@@ -28,7 +28,7 @@ const data = {
       icon: <ThunderstormOutlinedIcon color="primary" />,
       texts: [
         "En cas d'intempéries (pluie, vent, chaleur, etc.), l'événement sera maintenu sauf décision contraire du propriétaire.",
-        'Les participants assument les risques liés aux conditions météorologiques et doivent prévoir un équipement adapté tant sur le terrain de jeu que dans la safe zone.',
+        "Les participants assument les risques liés aux conditions météorologiques et doivent prévoir un équipement adapté tant sur le terrain de jeu que dans la safe zone.",
       ],
     },
   ],

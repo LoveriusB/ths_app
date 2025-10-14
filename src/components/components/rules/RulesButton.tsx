@@ -7,11 +7,11 @@ import {
   Divider,
   Grid,
   Typography,
-} from '@mui/material';
-import { useState } from 'react';
-import { ReplicaRules } from './ReplicaRules';
-import { RulesDisclaimer } from './RulesDisclaimer';
-import { ResponsiveDialog } from '../misc/ResponsiveDialog';
+} from "@mui/material";
+import { useState } from "react";
+import { ResponsiveDialog } from "../misc/ResponsiveDialog";
+import { ReplicaRules } from "./ReplicaRules";
+import { RulesDisclaimer } from "./RulesDisclaimer";
 
 export const RulesButton: React.FC<ButtonProps> = ({ ...props }) => {
   const [open, setOpen] = useState<boolean>(false);

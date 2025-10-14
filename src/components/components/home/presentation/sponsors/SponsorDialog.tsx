@@ -1,29 +1,29 @@
+import EventIcon from "@mui/icons-material/Event";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LanguageIcon from "@mui/icons-material/Language";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import MilitaryTechIcon from "@mui/icons-material/MilitaryTech";
+import VerifiedIcon from "@mui/icons-material/Verified";
+import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import {
-  DialogContent,
-  DialogActions,
-  Button,
-  Typography,
-  Box,
-  Stack,
-  Chip,
-  Divider,
   Avatar,
-  Grid,
+  Box,
+  Button,
   Card,
   CardContent,
+  Chip,
+  DialogActions,
+  DialogContent,
+  Divider,
+  Grid,
   Link as MUILink,
+  Stack,
   Tooltip,
-} from '@mui/material';
-import { styled } from '@mui/material/styles';
-import VerifiedIcon from '@mui/icons-material/Verified';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LanguageIcon from '@mui/icons-material/Language';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
-import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
-import EventIcon from '@mui/icons-material/Event';
-import { ResponsiveDialog } from '../../../misc/ResponsiveDialog';
+  Typography,
+} from "@mui/material";
+import { styled } from "@mui/material/styles";
+import { ResponsiveDialog } from "../../../misc/ResponsiveDialog";
 
 // -----------------------------
 // Types & default data
@@ -55,18 +55,18 @@ export type UnitSponsorInfo = {
 // -----------------------------
 // Styled components
 // -----------------------------
-const Cover = styled('div')(({ theme }) => ({
-  position: 'relative',
-  width: '100%',
+const Cover = styled("div")(({ theme }) => ({
+  position: "relative",
+  width: "100%",
   height: 180,
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
+  backgroundSize: "cover",
+  backgroundPosition: "center",
   borderTopLeftRadius: theme.shape.borderRadius,
   borderTopRightRadius: theme.shape.borderRadius,
 }));
 
 const FloatingCard = styled(Card)(({ theme }) => ({
-  position: 'relative',
+  position: "relative",
   top: -40,
   marginBottom: -24,
   borderRadius: 16,
@@ -94,13 +94,13 @@ export function SponsorDialog({
       scroll="paper"
       slotProps={{ paper: { sx: { borderRadius: 3 } } }}
     >
-      <DialogContent dividers sx={{ p: 0, border: 'none' }}>
+      <DialogContent dividers sx={{ p: 0, border: "none" }}>
         <Box position="relative">
           {/* Header cover */}
           <Cover
             style={{
               backgroundImage: `url(${info.coverUrl})`,
-              backgroundSize: 'fit-content',
+              backgroundSize: "fit-content",
             }}
           />
 
@@ -109,20 +109,20 @@ export function SponsorDialog({
             <FloatingCard>
               <CardContent>
                 <Stack
-                  direction={{ xs: 'column', sm: 'row' }}
+                  direction={{ xs: "column", sm: "row" }}
                   spacing={2}
-                  alignItems={{ xs: 'center', sm: 'flex-start' }}
+                  alignItems={{ xs: "center", sm: "flex-start" }}
                 >
                   <Avatar
                     src={info.logoUrl}
                     alt={info.name}
                     sx={{ width: 72, height: 72 }}
                   />
-                  <Box flex={1} textAlign={{ xs: 'center', sm: 'left' }}>
+                  <Box flex={1} textAlign={{ xs: "center", sm: "left" }}>
                     <Stack
                       direction="row"
                       alignItems="center"
-                      justifyContent={{ xs: 'center', sm: 'flex-start' }}
+                      justifyContent={{ xs: "center", sm: "flex-start" }}
                       spacing={1}
                     >
                       <Typography variant="h5" fontWeight={700}>
@@ -147,7 +147,7 @@ export function SponsorDialog({
                       container
                       spacing={1}
                       mt={1}
-                      justifyContent={{ xs: 'center', sm: 'flex-start' }}
+                      justifyContent={{ xs: "center", sm: "flex-start" }}
                       flexWrap="wrap"
                     >
                       <Chip
@@ -180,7 +180,7 @@ export function SponsorDialog({
         <Divider />
         <Box p={3}>
           {/* Description */}
-          <Typography variant="body1" sx={{ mb: 2 }} textAlign={'justify'}>
+          <Typography variant="body1" sx={{ mb: 2 }} textAlign={"justify"}>
             {info.description}
           </Typography>
 
@@ -218,19 +218,19 @@ export function SponsorDialog({
                   <Grid size={{ xs: 12 }} key={idx}>
                     <Card
                       variant="outlined"
-                      sx={{ height: '100%', borderRadius: 2 }}
+                      sx={{ height: "100%", borderRadius: 2 }}
                     >
                       <CardContent>
                         <Grid
                           container
                           size={{ xs: 12 }}
-                          justifyContent={'center'}
+                          justifyContent={"center"}
                         >
                           <Grid
                             size={{ xs: 5 }}
                             container
                             flexDirection="column"
-                            justifyContent={'center'}
+                            justifyContent={"center"}
                           >
                             <Typography fontWeight={700}>{p.title}</Typography>
                             {p.subtitle && (
@@ -247,7 +247,7 @@ export function SponsorDialog({
                               />
                             )}
                           </Grid>
-                          <Grid container margin={'0 16px'}>
+                          <Grid container margin={"0 16px"}>
                             <Divider orientation="vertical" />
                           </Grid>
                           <Grid
@@ -256,7 +256,7 @@ export function SponsorDialog({
                             padding={2}
                             size={{ xs: 5 }}
                             flexDirection="column"
-                            justifyContent={'center'}
+                            justifyContent={"center"}
                           >
                             {p.chips &&
                               p.chips.map((c, i) => (
@@ -277,12 +277,12 @@ export function SponsorDialog({
             <Typography
               variant="caption"
               color="textSecondary"
-              sx={{ display: 'block', mt: 2 }}
+              sx={{ display: "block", mt: 2 }}
             >
               {info.legalNotes}
             </Typography>
           )}
-          <Stack direction={{ xs: 'column', sm: 'row' }} mt={2} spacing={1}>
+          <Stack direction={{ xs: "column", sm: "row" }} mt={2} spacing={1}>
             {info.links?.website && (
               <Button
                 variant="outlined"

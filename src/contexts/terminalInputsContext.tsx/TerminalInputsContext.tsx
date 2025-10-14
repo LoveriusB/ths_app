@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
+import { createContext } from "react";
 import {
+  ICommandHistory,
   TerminalInputsContextInterface,
   TerminalInputsContextProviderInterface,
-  ICommandHistory,
 } from "../../commons-utils";
-import { createContext } from "react";
 
 export enum UserContextActions {
   "CLEAR_BUFFER" = "CLEAR_BUFFER",

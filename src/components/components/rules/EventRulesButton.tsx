@@ -6,15 +6,15 @@ import {
   DialogProps,
   DialogTitle,
   Typography,
-} from '@mui/material';
-import { useState } from 'react';
-import { EventRules } from './EventRules';
-import { ResponsiveDialog } from '../misc/ResponsiveDialog';
-import { isNil } from 'lodash';
+} from "@mui/material";
+import { isNil } from "lodash";
+import { useState } from "react";
+import { ResponsiveDialog } from "../misc/ResponsiveDialog";
+import { EventRules } from "./EventRules";
 
 interface EventRulesButtonProps {
   buttonProps?: ButtonProps;
-  dialogProps?: Omit<DialogProps, 'open'>;
+  dialogProps?: Omit<DialogProps, "open">;
   onAccept?: () => void;
   onRefuse?: () => void;
 }

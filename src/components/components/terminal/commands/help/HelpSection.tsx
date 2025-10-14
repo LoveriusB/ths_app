@@ -1,6 +1,6 @@
 import { Grid, Typography } from "@mui/material";
-import { CommandEntry } from "../../../../../commons-utils";
 import { FC } from "react";
+import { CommandEntry } from "../../../../../commons-utils";
 
 interface IHelpSectionProps {
   commandName: string; // The name of the command to display

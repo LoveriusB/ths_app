@@ -6,15 +6,15 @@ import {
   DialogProps,
   DialogTitle,
   Typography,
-} from '@mui/material';
-import { useState } from 'react';
-import { NoRefundContent } from './NoRefundContent';
-import { ResponsiveDialog } from '../misc/ResponsiveDialog';
-import { isNil } from 'lodash';
+} from "@mui/material";
+import { isNil } from "lodash";
+import { useState } from "react";
+import { ResponsiveDialog } from "../misc/ResponsiveDialog";
+import { NoRefundContent } from "./NoRefundContent";
 
 interface NoRefundButtonProps {
   buttonProps?: ButtonProps;
-  dialogProps?: Omit<DialogProps, 'open'>;
+  dialogProps?: Omit<DialogProps, "open">;
   onAccept?: () => void;
   onRefuse?: () => void;
 }
@@ -32,7 +32,7 @@ export const NoRefundButton: React.FC<NoRefundButtonProps> = ({
         open={open}
         onClose={() => setOpen(false)}
         {...dialogProps}
-        lateralColor={'error'}
+        lateralColor={"error"}
       >
         <DialogTitle>Pas de remboursement</DialogTitle>
         <DialogContent dividers>

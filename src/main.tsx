@@ -1,15 +1,15 @@
 import { StrictMode } from "react";
-import { BrowserRouter } from "react-router-dom";
 import * as ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 
 import WebFontLoader from "webfontloader";
 
+import App from "./App";
+import { SelectedThemeContextProvider } from "./contexts/selectedThemeContext.tsx/SelectedThemeProvider";
+import { UserContextProvider } from "./contexts/userContext/UserProvider";
 import { QueryClientProviders } from "./queryClient";
 import { ContextWrappers } from "./wrappers/ContextWrappers";
 import { TerminalContextWrappers } from "./wrappers/TerminalContextWrappers";
-import App from "./App";
-import { UserContextProvider } from "./contexts/userContext/UserProvider";
-import { SelectedThemeContextProvider } from "./contexts/selectedThemeContext.tsx/SelectedThemeProvider";
 
 WebFontLoader.load({
   google: {

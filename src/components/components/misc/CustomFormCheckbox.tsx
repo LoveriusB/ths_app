@@ -1,15 +1,15 @@
-import { FormControlLabel, Grid, Typography } from '@mui/material';
-import { CustomizedCheckBox } from './CustomizedCheckBox';
-import { useFormikContext } from 'formik';
-import { FormValues } from '../registrationForm/RegisterDialog';
+import { FormControlLabel, Grid, Typography } from "@mui/material";
+import { useFormikContext } from "formik";
+import { FormValues } from "../registrationForm/RegisterDialog";
+import { CustomizedCheckBox } from "./CustomizedCheckBox";
 
 interface CustomFormCheckBoxProps {
   name:
-    | 'valuesValidated'
-    | 'hasReadRules'
-    | 'hasReadPrivacy'
-    | 'hasReadPayback'
-    | 'authorizationFromOtherPlayers';
+    | "valuesValidated"
+    | "hasReadRules"
+    | "hasReadPrivacy"
+    | "hasReadPayback"
+    | "authorizationFromOtherPlayers";
 
   text: string;
   button: React.ReactNode;
@@ -25,11 +25,11 @@ export const CustomFormCheckBox: React.FC<CustomFormCheckBoxProps> = ({
     <FormControlLabel
       control={<CustomizedCheckBox name={name} />}
       label={
-        <Grid width={'100%'}>
+        <Grid width={"100%"}>
           <Typography
-            component={'p'}
+            component={"p"}
             variant="checkbox"
-            color={errors[name] ? 'error' : 'textSecondary'}
+            color={errors[name] ? "error" : "textSecondary"}
             gutterBottom
           >
             {text}

@@ -1,6 +1,6 @@
-import { UnAuthAdmin } from "./UnAuthAdmin";
-import { AuthAdmin } from "./AuthAdmin";
 import { useUser } from "../../../hooks/useUser";
+import { AuthAdmin } from "./AuthAdmin";
+import { UnAuthAdmin } from "./UnAuthAdmin";
 
 export interface AdminProps {
   [key: string]: string;

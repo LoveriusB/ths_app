@@ -1,4 +1,4 @@
-import { Button, ButtonProps, CircularProgress } from '@mui/material';
+import { Button, ButtonProps, CircularProgress } from "@mui/material";
 
 export interface LoaderButtonProps extends ButtonProps {
   isLoading: boolean;
@@ -12,7 +12,7 @@ export const LoaderButton: React.FC<LoaderButtonProps> = ({
 }) => {
   return (
     <Button disabled={isLoading} {...other}>
-      {isLoading ? <CircularProgress size={'24px'} /> : label}
+      {isLoading ? <CircularProgress size={"24px"} /> : label}
     </Button>
   );
 };

@@ -1,6 +1,4 @@
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { ReactNode } from "react";
-import { getAuthUser } from "../../commons-utils";
 import {
   confirmSignIn,
   signIn,
@@ -11,6 +9,8 @@ import {
   type SignInOutput,
   type SignOutInput,
 } from "aws-amplify/auth";
+import { ReactNode } from "react";
+import { getAuthUser } from "../../commons-utils";
 import { UserContext } from "./UserContext";
 
 export const UserContextProvider = ({ children }: { children: ReactNode }) => {

@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material';
+import { Typography } from "@mui/material";
 
 export interface warnProps {
   message: string;
@@ -7,7 +7,7 @@ export interface warnProps {
 export const Warn: React.FC<warnProps> = ({ message }) => {
   return (
     <Typography>
-      <span style={{ color: '#FFA500' }}>[WARN]</span>: {message}
+      <span style={{ color: "#FFA500" }}>[WARN]</span>: {message}
     </Typography>
   );
 };

@@ -9,7 +9,7 @@ export interface MinimalSize {
 
 export interface FrameProps {
   url: string;
-  type: 'video' | 'audio' | 'image';
+  type: "video" | "audio" | "image";
 }
 
 export interface WindowItem
@@ -41,7 +41,7 @@ export interface WindowStatePosition {
 
 export interface WindowContent {
   url: URL;
-  type: 'video' | 'audio' | 'image';
+  type: "video" | "audio" | "image";
 }
 
 export interface Position {

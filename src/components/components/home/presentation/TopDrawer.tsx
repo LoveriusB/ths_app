@@ -1,8 +1,8 @@
-import { Grid, Paper, Typography } from "@mui/material";
-import logo from "../../../SVG/LOGO.svg";
-import NightlightRoundIcon from "@mui/icons-material/NightlightRound";
 import LightModeIcon from "@mui/icons-material/LightMode";
+import NightlightRoundIcon from "@mui/icons-material/NightlightRound";
+import { Grid, Paper, Typography } from "@mui/material";
 import { useSelectedTheme } from "../../../../hooks/useSelectedTheme";
+import logo from "../../../SVG/LOGO.svg";
 
 export const TopDrawer: React.FC = () => {
   const { setTheme, selectedTheme } = useSelectedTheme();

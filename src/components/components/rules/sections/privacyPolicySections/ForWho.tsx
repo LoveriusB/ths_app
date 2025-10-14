@@ -1,6 +1,6 @@
-import { Typography } from '@mui/material';
-import { Section, SectionControlProps } from '../../../misc/Section';
-import GroupsIcon from '@mui/icons-material/GroupsOutlined';
+import GroupsIcon from "@mui/icons-material/GroupsOutlined";
+import { Typography } from "@mui/material";
+import { Section, SectionControlProps } from "../../../misc/Section";
 
 export const ForWho: React.FC<SectionControlProps> = ({
   expanded,

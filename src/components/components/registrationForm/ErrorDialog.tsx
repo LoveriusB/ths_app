@@ -1,15 +1,15 @@
 import {
-  DialogProps,
-  DialogTitle,
+  Button,
+  DialogActions,
   DialogContent,
   DialogContentText,
-  DialogActions,
-  Button,
-} from '@mui/material';
-import { ResponsiveDialog } from '../misc/ResponsiveDialog';
-import { JSX } from 'react';
+  DialogProps,
+  DialogTitle,
+} from "@mui/material";
+import { JSX } from "react";
+import { ResponsiveDialog } from "../misc/ResponsiveDialog";
 
-interface ErrorDialogProps extends Omit<DialogProps, 'onClose'> {
+interface ErrorDialogProps extends Omit<DialogProps, "onClose"> {
   message: JSX.Element;
   onClose: () => void;
 }

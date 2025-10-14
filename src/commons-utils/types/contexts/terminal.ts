@@ -1,6 +1,6 @@
-import { JSX, ReactNode } from 'react';
-import { FoldersContextInterface } from './folders';
-import { WindowItem } from '../windows/window';
+import { JSX, ReactNode } from "react";
+import { WindowItem } from "../windows/window";
+import { FoldersContextInterface } from "./folders";
 
 export interface TerminalInputsContextInterface {
   inputsHistory: ICommandHistory[];

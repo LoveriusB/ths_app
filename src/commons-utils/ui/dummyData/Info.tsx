@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material';
+import { Typography } from "@mui/material";
 
 export interface infoProps {
   message: string;
@@ -7,7 +7,7 @@ export interface infoProps {
 export const Info: React.FC<infoProps> = ({ message }) => {
   return (
     <Typography>
-      <span style={{ color: '#00FFFF' }}>[INFO]</span>: {message}
+      <span style={{ color: "#00FFFF" }}>[INFO]</span>: {message}
     </Typography>
   );
 };

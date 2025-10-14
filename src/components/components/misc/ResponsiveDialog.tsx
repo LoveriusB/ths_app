@@ -4,10 +4,10 @@ import {
   DialogProps,
   useMediaQuery,
   useTheme,
-} from '@mui/material';
+} from "@mui/material";
 
-interface ResponsiveDialogProps extends Omit<DialogProps, 'fullScreen'> {
-  lateralColor?: 'error' | 'info' | 'warning';
+interface ResponsiveDialogProps extends Omit<DialogProps, "fullScreen"> {
+  lateralColor?: "error" | "info" | "warning";
 }
 
 export const ResponsiveDialog: React.FC<ResponsiveDialogProps> = ({
@@ -16,13 +16,13 @@ export const ResponsiveDialog: React.FC<ResponsiveDialogProps> = ({
   ...dialogProps
 }) => {
   const theme = useTheme();
-  const isSmOrLess = useMediaQuery(theme.breakpoints.down('sm'));
+  const isSmOrLess = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <Dialog fullScreen={isSmOrLess} {...dialogProps}>
       {lateralColor && (
         <Box
           sx={{
-            position: 'absolute',
+            position: "absolute",
             left: 0,
             top: 0,
             bottom: 0,

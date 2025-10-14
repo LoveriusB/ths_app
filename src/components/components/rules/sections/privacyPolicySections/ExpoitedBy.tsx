@@ -1,6 +1,6 @@
-import { Typography, Link } from '@mui/material';
-import { Section, SectionControlProps } from '../../../misc/Section';
-import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettingsOutlined';
+import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
+import { Link, Typography } from "@mui/material";
+import { Section, SectionControlProps } from "../../../misc/Section";
 
 export const ExpoitedBy: React.FC<SectionControlProps> = ({
   expanded,
@@ -19,7 +19,7 @@ export const ExpoitedBy: React.FC<SectionControlProps> = ({
         responsable du traitement des données personnelles collectées.
       </Typography>
       <Typography>
-        Pour toute question, vous pouvez nous contacter à :{' '}
+        Pour toute question, vous pouvez nous contacter à :{" "}
         <Link href="mailto:admin@ths-airsoft.com">admin@ths-airsoft.com</Link>.
       </Typography>
     </Section>

@@ -1,6 +1,6 @@
-import { Typography } from '@mui/material';
-import { Section, SectionControlProps } from '../../../misc/Section';
-import UpdateIcon from '@mui/icons-material/UpdateOutlined';
+import UpdateIcon from "@mui/icons-material/UpdateOutlined";
+import { Typography } from "@mui/material";
+import { Section, SectionControlProps } from "../../../misc/Section";
 
 export const Update: React.FC<SectionControlProps> = ({
   expanded,

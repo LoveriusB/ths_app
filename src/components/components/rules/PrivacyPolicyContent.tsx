@@ -1,25 +1,25 @@
+import AutoDeleteIcon from "@mui/icons-material/AutoDeleteOutlined";
+import BlockIcon from "@mui/icons-material/BlockOutlined";
+import CloudOutlinedIcon from "@mui/icons-material/CloudOutlined";
+import CookieIcon from "@mui/icons-material/CookieOutlined";
+import GppGoodIcon from "@mui/icons-material/GppGoodOutlined";
+import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import {
-  Box,
-  Typography,
-  Divider,
-  Stack,
-  Grid,
   Alert,
   AlertTitle,
-} from '@mui/material';
-import { BadgesList } from '../misc/BadgesList';
-import GppGoodIcon from '@mui/icons-material/GppGoodOutlined';
-import BlockIcon from '@mui/icons-material/BlockOutlined';
-import CookieIcon from '@mui/icons-material/CookieOutlined';
-import CloudOutlinedIcon from '@mui/icons-material/CloudOutlined';
-import AutoDeleteIcon from '@mui/icons-material/AutoDeleteOutlined';
-import { PrivacyPolicyCards } from './PrivacyPolicyCards';
-import { PrivacyPolicySections } from './PrivacyPolicySections';
-import { RulesFooter } from './RulesFooter';
-import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
+  Box,
+  Divider,
+  Grid,
+  Stack,
+  Typography,
+} from "@mui/material";
+import { BadgesList } from "../misc/BadgesList";
+import { PrivacyPolicyCards } from "./PrivacyPolicyCards";
+import { PrivacyPolicySections } from "./PrivacyPolicySections";
+import { RulesFooter } from "./RulesFooter";
 
 export const PrivacyPolicyContent = () => {
-  const updatedAt = '23 septembre 2025'; // Modifiez si besoin
+  const updatedAt = "23 septembre 2025"; // Modifiez si besoin
 
   return (
     <Box>
@@ -31,12 +31,12 @@ export const PrivacyPolicyContent = () => {
         </Box>
         <BadgesList
           list={[
-            { icon: <GppGoodIcon />, label: 'Conforme RGPD' },
-            { icon: <BlockIcon />, label: 'Aucune publicité' },
-            { icon: <CookieIcon />, label: 'Pas de cookies tiers' },
+            { icon: <GppGoodIcon />, label: "Conforme RGPD" },
+            { icon: <BlockIcon />, label: "Aucune publicité" },
+            { icon: <CookieIcon />, label: "Pas de cookies tiers" },
             {
               icon: <CloudOutlinedIcon />,
-              label: 'Données hébergées sur AWS (UE si possible)',
+              label: "Données hébergées sur AWS (UE si possible)",
             },
             {
               icon: <AutoDeleteIcon />,
@@ -55,9 +55,9 @@ export const PrivacyPolicyContent = () => {
               <AlertTitle>Pour faire simple</AlertTitle>
               Nous collectons <strong>uniquement</strong> les données
               nécessaires à la gestion de <strong>votre</strong> inscription et
-              à l'organisation de l'événement. Nous ne partageons{' '}
+              à l'organisation de l'événement. Nous ne partageons{" "}
               <strong>jamais</strong> vos données avec des tiers à des fins
-              publicitaires. Vous pouvez demander la suppression de{' '}
+              publicitaires. Vous pouvez demander la suppression de{" "}
               <strong>vos</strong> données à tout moment.
             </Alert>
             <Divider />

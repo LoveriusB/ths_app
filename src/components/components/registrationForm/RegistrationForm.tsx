@@ -1,11 +1,11 @@
 import { Grid } from "@mui/material";
 import { useFormikContext } from "formik";
-import { FormValues } from "./RegisterDialog";
 import { ChangeEvent } from "react";
+import { TextDetailEditable } from "../misc/TextDetailEdiable";
+import { AmountOfPlayers } from "./AmountOfPlayers";
+import { FormValues } from "./RegisterDialog";
 import { RegistrationStepper } from "./RegistrationStepper";
 import { RegistrationSteps } from "./RegistrationSteps";
-import { AmountOfPlayers } from "./AmountOfPlayers";
-import { TextDetailEditable } from "../misc/TextDetailEdiable";
 
 export interface RegistrationFormProps {
   activeStep: number;

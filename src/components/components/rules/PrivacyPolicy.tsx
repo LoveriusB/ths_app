@@ -6,15 +6,15 @@ import {
   DialogProps,
   DialogTitle,
   Typography,
-} from '@mui/material';
-import { useState } from 'react';
-import { PrivacyPolicyContent } from './PrivacyPolicyContent';
-import { ResponsiveDialog } from '../misc/ResponsiveDialog';
-import { isNil } from 'lodash';
+} from "@mui/material";
+import { isNil } from "lodash";
+import { useState } from "react";
+import { ResponsiveDialog } from "../misc/ResponsiveDialog";
+import { PrivacyPolicyContent } from "./PrivacyPolicyContent";
 
 interface PrivacyPolicyButtonProps {
   buttonProps?: ButtonProps;
-  dialogProps?: Omit<DialogProps, 'open' | 'onClose'>;
+  dialogProps?: Omit<DialogProps, "open" | "onClose">;
   onAccept?: () => void;
   onRefuse?: () => void;
 }

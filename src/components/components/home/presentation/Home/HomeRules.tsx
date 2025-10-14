@@ -1,28 +1,28 @@
-import BackpackOutlinedIcon from '@mui/icons-material/BackpackOutlined';
-import CampaignOutlinedIcon from '@mui/icons-material/CampaignOutlined';
-import GrassIcon from '@mui/icons-material/Grass';
-import HandshakeOutlinedIcon from '@mui/icons-material/HandshakeOutlined';
-import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
-import SpeedIcon from '@mui/icons-material/SpeedOutlined';
+import BackpackOutlinedIcon from "@mui/icons-material/BackpackOutlined";
+import CampaignOutlinedIcon from "@mui/icons-material/CampaignOutlined";
+import GrassIcon from "@mui/icons-material/Grass";
+import HandshakeOutlinedIcon from "@mui/icons-material/HandshakeOutlined";
+import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
+import SpeedIcon from "@mui/icons-material/SpeedOutlined";
 
-import { RulesButton } from '../../../rules/RulesButton';
-import { Card } from '../Card/Card';
+import { RulesButton } from "../../../rules/RulesButton";
+import { Card } from "../Card/Card";
 
 export interface HomeRulesProps {
   [key: string]: string;
 }
 
 const data = {
-  title: 'Règles',
+  title: "Règles",
   topIconnedTexts: [
     {
       icon: <RemoveRedEyeOutlinedIcon color="primary" />,
-      text: 'Protection occulaire',
+      text: "Protection occulaire",
     },
-    { icon: <GrassIcon color="primary" />, text: 'Billes bio' },
+    { icon: <GrassIcon color="primary" />, text: "Billes bio" },
     {
       icon: <SpeedIcon color="primary" />,
-      text: 'Max 1.99 Joules',
+      text: "Max 1.99 Joules",
     },
   ],
   cardListItems: [
@@ -40,19 +40,19 @@ const data = {
     },
     {
       icon: <SpeedIcon color="primary" />,
-      texts: ['Puissance limitée : '],
+      texts: ["Puissance limitée : "],
       actionButton: <RulesButton fullWidth />,
     },
     {
       icon: <HandshakeOutlinedIcon color="primary" />,
       texts: [
-        'Fair-play absolu : chaque touche doit être annoncée honnêtement.',
+        "Fair-play absolu : chaque touche doit être annoncée honnêtement.",
       ],
     },
     {
       icon: <BackpackOutlinedIcon color="primary" />,
       texts: [
-        'Équipement adapté : prévoyez chargeurs, batteries et tenues prêtes à tenir sur la durée.',
+        "Équipement adapté : prévoyez chargeurs, batteries et tenues prêtes à tenir sur la durée.",
       ],
     },
     {

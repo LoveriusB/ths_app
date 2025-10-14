@@ -1,4 +1,4 @@
-import { Grid, Button, useTheme, useMediaQuery } from "@mui/material";
+import { Button, Grid, useMediaQuery, useTheme } from "@mui/material";
 import { useRegistrationContext } from "../../../../../hooks/useRegistrationContext";
 
 interface HomeButtonRowProps {

@@ -1,5 +1,5 @@
-import { List } from '@mui/material';
-import { PaperListItem } from '../../../misc/PaperListItem';
+import { List } from "@mui/material";
+import { PaperListItem } from "../../../misc/PaperListItem";
 
 interface ICardList {
   cardListItems: {
@@ -14,7 +14,7 @@ export const CardList: React.FC<ICardList> = ({ cardListItems }) => {
     <List>
       {cardListItems.map((item) => (
         <PaperListItem
-          key={item.texts.join(' ')}
+          key={item.texts.join(" ")}
           stringIcon={item.icon}
           text={item.texts}
           actionButton={item.actionButton}

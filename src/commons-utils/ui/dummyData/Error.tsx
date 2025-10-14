@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material';
+import { Typography } from "@mui/material";
 
 export interface errorProps {
   message: string;
@@ -7,7 +7,7 @@ export interface errorProps {
 export const Error: React.FC<errorProps> = ({ message }) => {
   return (
     <Typography>
-      <span style={{ color: '#CC3333' }}>[ERROR]</span>: {message}
+      <span style={{ color: "#CC3333" }}>[ERROR]</span>: {message}
     </Typography>
   );
 };

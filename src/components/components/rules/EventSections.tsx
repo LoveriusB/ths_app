@@ -1,11 +1,11 @@
-import { BaseRules } from './sections/eventSections/BaseRules';
-import { InGameRules } from './sections/eventSections/InGameRules';
-import { CampingRules } from './sections/eventSections/CampingRules';
-import { ChronoRules } from './sections/eventSections/ChronoRules';
-import { PMARules } from './sections/eventSections/PMARules';
-import { VillageRules } from './sections/eventSections/VillageRules';
-import { Grid } from '@mui/material';
-import { useState } from 'react';
+import { Grid } from "@mui/material";
+import { useState } from "react";
+import { BaseRules } from "./sections/eventSections/BaseRules";
+import { CampingRules } from "./sections/eventSections/CampingRules";
+import { ChronoRules } from "./sections/eventSections/ChronoRules";
+import { InGameRules } from "./sections/eventSections/InGameRules";
+import { PMARules } from "./sections/eventSections/PMARules";
+import { VillageRules } from "./sections/eventSections/VillageRules";
 
 export const EventSections = () => {
   const [expanded, setExpanded] = useState<string | null>(null);

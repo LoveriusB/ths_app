@@ -1,9 +1,9 @@
-import { CommandHandler } from "../../../../../commons-utils";
+import { Grid } from "@mui/material";
 import { CommandNames, commands } from "..";
+import { CommandHandler } from "../../../../../commons-utils";
+import { HelpFooter } from "./HelpFooter";
 import { HelpSection } from "./HelpSection";
 import { HelpTitle } from "./HelpTitle";
-import { HelpFooter } from "./HelpFooter";
-import { Grid } from "@mui/material";
 
 export const helpCommand: CommandHandler = (_ctx) => {
   console.log(_ctx);

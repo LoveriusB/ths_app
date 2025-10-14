@@ -6,15 +6,15 @@ import {
   DialogTitle,
 } from "@mui/material";
 import { loadStripe } from "@stripe/stripe-js";
-import { isNilOrEmpty, yupToFormikErrors } from "../../../commons-utils";
 import { Formik } from "formik";
-import * as Yup from "yup";
-import { LoaderButton } from "../buttons/LoaderButton";
-import { RegistrationForm } from "./RegistrationForm";
 import { useState } from "react";
-import { recapSchema, validationSchema } from "./schema";
-import { ResponsiveDialog } from "../misc/ResponsiveDialog";
+import * as Yup from "yup";
 import { amplifyClient } from "../../../amplifyClient";
+import { isNilOrEmpty, yupToFormikErrors } from "../../../commons-utils";
+import { LoaderButton } from "../buttons/LoaderButton";
+import { ResponsiveDialog } from "../misc/ResponsiveDialog";
+import { RegistrationForm } from "./RegistrationForm";
+import { recapSchema, validationSchema } from "./schema";
 
 export type FormValues = {
   team: string;

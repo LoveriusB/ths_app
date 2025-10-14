@@ -1,6 +1,6 @@
-import { Typography } from '@mui/material';
-import { Section, SectionControlProps } from '../../../misc/Section';
-import CookieIcon from '@mui/icons-material/CookieOutlined';
+import CookieIcon from "@mui/icons-material/CookieOutlined";
+import { Typography } from "@mui/material";
+import { Section, SectionControlProps } from "../../../misc/Section";
 
 export const Cookies: React.FC<SectionControlProps> = ({
   expanded,

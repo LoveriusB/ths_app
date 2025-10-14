@@ -1,13 +1,13 @@
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import {
   Accordion,
+  AccordionDetails,
   AccordionSummary,
+  Grid,
   Stack,
   Typography,
-  AccordionDetails,
-  Grid,
-} from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { isNil } from 'lodash';
+} from "@mui/material";
+import { isNil } from "lodash";
 
 export interface SectionControlProps {
   expanded?: string | null;
@@ -52,9 +52,9 @@ export const Section: React.FC<SectionProps> = ({
         direction="row"
         spacing={1}
         alignItems="center"
-        width={'100%'}
+        width={"100%"}
       >
-        <Grid container justifyContent={'center'} size={{ xs: 2 }}>
+        <Grid container justifyContent={"center"} size={{ xs: 2 }}>
           {icon}
         </Grid>
         <Grid size={{ xs: 10 }}>

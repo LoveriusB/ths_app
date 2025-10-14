@@ -1,6 +1,6 @@
-import { Typography, List, ListItem, ListItemText } from '@mui/material';
-import { Section, SectionControlProps } from '../../../misc/Section';
-import ChecklistRtlIcon from '@mui/icons-material/ChecklistRtlOutlined';
+import ChecklistRtlIcon from "@mui/icons-material/ChecklistRtlOutlined";
+import { List, ListItem, ListItemText, Typography } from "@mui/material";
+import { Section, SectionControlProps } from "../../../misc/Section";
 
 export const CollectedData: React.FC<SectionControlProps> = ({
   expanded,

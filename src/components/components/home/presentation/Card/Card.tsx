@@ -1,6 +1,6 @@
-import { Divider, Grid, Paper, Typography } from '@mui/material';
-import { TopIconnedTexts } from './TopIconnedTexts';
-import { CardList } from './CardList';
+import { Divider, Grid, Paper, Typography } from "@mui/material";
+import { CardList } from "./CardList";
+import { TopIconnedTexts } from "./TopIconnedTexts";
 
 export interface CardProps {
   title: string;

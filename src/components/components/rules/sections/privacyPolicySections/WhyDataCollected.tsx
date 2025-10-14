@@ -1,6 +1,6 @@
-import { Typography, List, ListItem, ListItemText } from '@mui/material';
-import { Section, SectionControlProps } from '../../../misc/Section';
-import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
+import { List, ListItem, ListItemText, Typography } from "@mui/material";
+import { Section, SectionControlProps } from "../../../misc/Section";
 
 export const WhyDataCollected: React.FC<SectionControlProps> = ({
   expanded,
@@ -27,7 +27,7 @@ export const WhyDataCollected: React.FC<SectionControlProps> = ({
         </ListItem>
       </List>
       <Typography>
-        {' '}
+        {" "}
         Aucune autre utilisation n'est faite (pas de publicité, pas de
         profilage, pas de revente).
       </Typography>

@@ -1,6 +1,6 @@
-import { Typography } from '@mui/material';
-import { Section, SectionControlProps } from '../../../misc/Section';
-import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
+import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
+import { Typography } from "@mui/material";
+import { Section, SectionControlProps } from "../../../misc/Section";
 
 export const SharedWithWho: React.FC<SectionControlProps> = ({
   expanded,

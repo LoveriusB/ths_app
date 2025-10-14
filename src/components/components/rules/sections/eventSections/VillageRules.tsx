@@ -1,6 +1,6 @@
-import { Grid, Card, CardContent, Typography } from '@mui/material';
-import { Section, SectionControlProps } from '../../../misc/Section';
-import SecurityIcon from '@mui/icons-material/SecurityOutlined';
+import SecurityIcon from "@mui/icons-material/SecurityOutlined";
+import { Card, CardContent, Grid, Typography } from "@mui/material";
+import { Section, SectionControlProps } from "../../../misc/Section";
 
 export const VillageRules: React.FC<SectionControlProps> = ({
   expanded,

@@ -1,6 +1,6 @@
-import { Typography } from '@mui/material';
-import { Section, SectionControlProps } from '../../../misc/Section';
-import LocalHospitalIcon from '@mui/icons-material/LocalHospitalOutlined';
+import LocalHospitalIcon from "@mui/icons-material/LocalHospitalOutlined";
+import { Typography } from "@mui/material";
+import { Section, SectionControlProps } from "../../../misc/Section";
 
 export const PMARules: React.FC<SectionControlProps> = ({
   expanded,

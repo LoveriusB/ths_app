@@ -1,6 +1,6 @@
 import { Grid, MenuItem, Select, Typography } from "@mui/material";
-import { MAX_PLAYERS } from "./RegisterDialog";
 import { useRegistrationContext } from "../../../hooks/useRegistrationContext";
+import { MAX_PLAYERS } from "./RegisterDialog";
 
 interface AmountOfPlayersProps {
   playersCount: number;

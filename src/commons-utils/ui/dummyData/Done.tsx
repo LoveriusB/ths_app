@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material';
+import { Typography } from "@mui/material";
 
 export interface doneProps {
   message: string;
@@ -7,7 +7,7 @@ export interface doneProps {
 export const Done: React.FC<doneProps> = ({ message }) => {
   return (
     <Typography>
-      <span style={{ color: '#66CC66' }}>[DONE]</span>: {message}
+      <span style={{ color: "#66CC66" }}>[DONE]</span>: {message}
     </Typography>
   );
 };

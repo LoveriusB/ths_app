@@ -1,9 +1,9 @@
-import { Typography, Divider } from "@mui/material";
+import { Divider, Typography } from "@mui/material";
 import { Form, Formik } from "formik";
+import { useUser } from "../../../../../hooks/useUser";
 import { LoaderButton } from "../../../buttons/LoaderButton";
 import { ChangePasswordFormContent } from "./ChangePasswordFormContent";
 import { changePasswordFormSchema } from "./changePasswordFormSchema";
-import { useUser } from "../../../../../hooks/useUser";
 interface ChangePasswordProps {
   setFormState: (state: "signIn" | "changePassword") => void;
 }

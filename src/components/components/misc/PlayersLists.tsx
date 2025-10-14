@@ -14,7 +14,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import { groupBy, chunk, capitalize } from "lodash";
+import { capitalize, chunk, groupBy } from "lodash";
 import { useState } from "react";
 import { Schema } from "../../../../amplify/backend";
 import { useRegistrationContext } from "../../../hooks/useRegistrationContext";

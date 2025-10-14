@@ -1,5 +1,5 @@
 import { Client } from 'aws-amplify/api';
-import { type Schema } from '../../../amplify/backend'
+import { type Schema } from '../../../amplify/backend';
 
 const filters = {
   registration: { stripePaymentStatus: { eq: 'completed' } },

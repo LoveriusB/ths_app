@@ -1,7 +1,7 @@
 import { TextField, TextFieldProps } from "@mui/material";
 import { useFormikContext } from "formik";
-import { FormValues } from "../registrationForm/RegisterDialog";
 import { get } from "lodash";
+import { FormValues } from "../registrationForm/RegisterDialog";
 
 export const TextDetailEditable: React.FC<TextFieldProps> = ({
   name,

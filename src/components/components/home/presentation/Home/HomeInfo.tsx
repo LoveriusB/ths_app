@@ -1,26 +1,27 @@
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import BedtimeOutlinedIcon from '@mui/icons-material/BedtimeOutlined';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import EuroIcon from '@mui/icons-material/Euro';
-import LocationPinIcon from '@mui/icons-material/LocationPin';
-import PetsIcon from '@mui/icons-material/PetsOutlined';
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import BedtimeOutlinedIcon from "@mui/icons-material/BedtimeOutlined";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import EuroIcon from "@mui/icons-material/Euro";
+import LocationPinIcon from "@mui/icons-material/LocationPin";
+import PetsIcon from "@mui/icons-material/PetsOutlined";
 
-import { Card } from '../Card/Card';
+import { Card } from "../Card/Card";
 
 export interface HomeInfoProps {
   [key: string]: string;
 }
 
 const data = {
-  title: 'Infos',
+  title: "Infos",
   topIconnedTexts: [
-    { icon: <EuroIcon color="primary" />, text: '125 €' },
-    { icon: <CalendarMonthIcon color="primary" />, text: '1-3 mai 2026' },
+    { icon: <EuroIcon color="primary" />, text: "125 €" },
+    { icon: <CalendarMonthIcon color="primary" />, text: "1-3 mai 2026" },
     {
       icon: <LocationPinIcon color="primary" />,
       text: "La Tête de l'Ours",
       button: true,
-      href: "https://www.google.com/maps/search/fort+de+La+T%C3%AAte+de+l'Ours,+Haut-du-Them-Ch%C3%A2teau-Lambert,+France/@47.8603146,6.741342,18.5z?entry=ttu&g_ep=EgoyMDI1MDkxMC4wIKXMDSoASAFQAw%3D%3D",
+      href:
+        "https://www.google.com/maps/search/fort+de+La+T%C3%AAte+de+l'Ours,+Haut-du-Them-Ch%C3%A2teau-Lambert,+France/@47.8603146,6.741342,18.5z?entry=ttu&g_ep=EgoyMDI1MDkxMC4wIKXMDSoASAFQAw%3D%3D",
     },
   ],
   cardListItems: [
@@ -28,7 +29,7 @@ const data = {
       icon: <PetsIcon color="primary" />,
       texts: [
         "Préparez vos répliques, l'aventure commence ! Du vendredi 1er au dimanche 3 mai 2026, la THS vous invite à participer à son OPEX qui se déroulera dans le cadre unique de La Tête de l'Ours, dans le massif des Vosges, en France.",
-        'Trois jours intenses, rythmés par des scénarios immersifs, des affrontements stratégiques et une ambiance qui promet de marquer les esprits.',
+        "Trois jours intenses, rythmés par des scénarios immersifs, des affrontements stratégiques et une ambiance qui promet de marquer les esprits.",
       ],
     },
     {

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import * as Yup from 'yup';
 import { FormikErrors, getIn, setIn } from 'formik';
+import * as Yup from 'yup';
 
 type MultiStrategy = 'first' | 'join' | 'array';
 

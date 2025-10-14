@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material';
+import { Typography } from "@mui/material";
 
 export interface retryProps {
   message: string;
@@ -7,7 +7,7 @@ export interface retryProps {
 export const Retry: React.FC<retryProps> = ({ message }) => {
   return (
     <Typography>
-      <span style={{ color: '#CC00CC' }}>[RETRY]</span>: {message}
+      <span style={{ color: "#CC00CC" }}>[RETRY]</span>: {message}
     </Typography>
   );
 };

@@ -1,6 +1,6 @@
-import { Typography } from '@mui/material';
-import { Section, SectionControlProps } from '../../../misc/Section';
-import WhatshotIcon from '@mui/icons-material/WhatshotOutlined';
+import WhatshotIcon from "@mui/icons-material/WhatshotOutlined";
+import { Typography } from "@mui/material";
+import { Section, SectionControlProps } from "../../../misc/Section";
 
 export const CampingRules: React.FC<SectionControlProps> = ({
   expanded,
@@ -23,7 +23,7 @@ export const CampingRules: React.FC<SectionControlProps> = ({
         dans de bonnes conditions.
       </Typography>
       <Typography>
-        Les joueurs doivent être en <strong>autonomie complète</strong>{' '}
+        Les joueurs doivent être en <strong>autonomie complète</strong>{" "}
         (nourriture, électricité, hygiène, …). Par souci de place, seul les
         tentes de 2 personnes ou moins seront autorisées.
       </Typography>

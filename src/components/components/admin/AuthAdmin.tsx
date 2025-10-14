@@ -1,8 +1,8 @@
 import { Button, Grid } from "@mui/material";
+import { useUser } from "../../../hooks/useUser";
 import { BottomDrawer } from "../home/presentation/BottomDrawer";
 import { TopDrawer } from "../home/presentation/TopDrawer";
 import { PlayersLists } from "../misc/PlayersLists";
-import { useUser } from "../../../hooks/useUser";
 
 export const AuthAdmin = () => {
   const { adminSignOut } = useUser();

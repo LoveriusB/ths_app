@@ -1,6 +1,6 @@
-import { Typography, List, ListItem, ListItemText, Link } from '@mui/material';
-import { Section, SectionControlProps } from '../../../misc/Section';
-import PolicyIcon from '@mui/icons-material/PolicyOutlined';
+import PolicyIcon from "@mui/icons-material/PolicyOutlined";
+import { Link, List, ListItem, ListItemText, Typography } from "@mui/material";
+import { Section, SectionControlProps } from "../../../misc/Section";
 
 export const RightsOverData: React.FC<SectionControlProps> = ({
   expanded,
@@ -32,9 +32,9 @@ export const RightsOverData: React.FC<SectionControlProps> = ({
         </ListItem>
       </List>
       <Typography>
-        Pour exercer ces droits, vous pouvez nous contacter à :{' '}
+        Pour exercer ces droits, vous pouvez nous contacter à :{" "}
         <Link href="mailto:admin@ths-airsoft.com">admin@ths-airsoft.com</Link>.
-        Nous traiterons votre demande dans un délai maximum de{' '}
+        Nous traiterons votre demande dans un délai maximum de{" "}
         <strong>30 jours</strong>.
       </Typography>
     </Section>
