@@ -50,7 +50,6 @@ export const UserContextProvider = ({ children }: { children: ReactNode }) => {
     return result;
   };
 
-  if (isLoading) return <div>Chargement…</div>;
   const value = {
     user,
     isLoading,

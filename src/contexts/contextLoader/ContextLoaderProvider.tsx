@@ -16,7 +16,6 @@ export const ContextLoaderProvider = ({
     queryKey: ["data", user?.userId],
     queryFn: () => fetchAllData(amplifyClient, !isNil(user)),
   });
-  if (isLoading) return <div>Chargement des données…</div>;
 
   const value = {
     isLoading,
