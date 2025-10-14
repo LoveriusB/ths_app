@@ -1,82 +1,11 @@
-import React, { useMemo, useReducer } from "react";
-import { IWindowsContext, WindowItem } from "../commons-utils";
-// import { getUrl } from '@ths-monorepo/amplify-ths';
-
-enum WindowsContextActions {
-  "SET_DATA" = "SET_DATA",
-  "SET_WINDOWS" = "SET_WINDOWS",
-  "SET_CONTEXT_LOADING" = "SET_CONTEXT_LOADING",
-  "ADD_WINDOW" = "ADD_WINDOW",
-  "CLOSE_WINDOW" = "CLOSE_WINDOW",
-}
-
-type Action =
-  | {
-      type: typeof WindowsContextActions.SET_DATA;
-      payload: Partial<IWindowsContext>;
-    }
-  | {
-      type: typeof WindowsContextActions.SET_WINDOWS;
-      payload: WindowItem[];
-    }
-  | {
-      type: typeof WindowsContextActions.SET_CONTEXT_LOADING;
-      payload: boolean;
-    }
-  | {
-      type: typeof WindowsContextActions.ADD_WINDOW;
-      payload: WindowItem;
-    }
-  | {
-      type: typeof WindowsContextActions.CLOSE_WINDOW;
-      payload: string;
-    };
-
-interface WindowsContextStateInterface {
-  allWindows: WindowItem[];
-  loading: boolean;
-}
-
-const initialState: WindowsContextStateInterface = {
-  allWindows: [],
-  loading: false,
-};
-
-const windowsContextReducer = (
-  state: WindowsContextStateInterface,
-  action: Action
-) => {
-  switch (action.type) {
-    case WindowsContextActions.SET_DATA:
-      return {
-        ...state,
-        ...action.payload,
-      };
-
-    case WindowsContextActions.SET_WINDOWS:
-      return {
-        ...state,
-        allWindows: action.payload,
-      };
-
-    case WindowsContextActions.SET_CONTEXT_LOADING:
-      return {
-        ...state,
-        loading: action.payload,
-      };
-
-    case WindowsContextActions.ADD_WINDOW:
-      return {
-        ...state,
-        allWindows: [...state.allWindows, action.payload],
-      };
-
-    default:
-      return state;
-  }
-};
-
-export const WindowsContext = React.createContext<IWindowsContext | null>(null);
+import { useMemo, useReducer } from "react";
+import { WindowItem } from "../../commons-utils";
+import {
+  initialState,
+  WindowsContext,
+  WindowsContextActions,
+  windowsContextReducer,
+} from "./WindowsContext";
 
 export const WindowsContextProvider = ({
   children,

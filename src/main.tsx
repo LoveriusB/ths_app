@@ -5,12 +5,11 @@ import * as ReactDOM from "react-dom/client";
 import WebFontLoader from "webfontloader";
 
 import { QueryClientProviders } from "./queryClient";
-import { AmplifyClientProvider } from "./contexts/AmplifyClient/AmplifyClient";
-import { UserContextProvider } from "./contexts/UserContext";
 import { ContextWrappers } from "./wrappers/ContextWrappers";
 import { TerminalContextWrappers } from "./wrappers/TerminalContextWrappers";
-import { SelectedThemeContextProvider } from "./contexts/SelectedThemeContext";
 import App from "./App";
+import { UserContextProvider } from "./contexts/userContext/UserProvider";
+import { SelectedThemeContextProvider } from "./contexts/selectedThemeContext.tsx/SelectedThemeProvider";
 
 WebFontLoader.load({
   google: {
@@ -26,17 +25,15 @@ root.render(
   <StrictMode>
     <BrowserRouter>
       <QueryClientProviders>
-        <AmplifyClientProvider>
-          <UserContextProvider>
-            <ContextWrappers>
-              <TerminalContextWrappers>
-                <SelectedThemeContextProvider>
-                  <App />
-                </SelectedThemeContextProvider>
-              </TerminalContextWrappers>
-            </ContextWrappers>
-          </UserContextProvider>
-        </AmplifyClientProvider>
+        <UserContextProvider>
+          <ContextWrappers>
+            <TerminalContextWrappers>
+              <SelectedThemeContextProvider>
+                <App />
+              </SelectedThemeContextProvider>
+            </TerminalContextWrappers>
+          </ContextWrappers>
+        </UserContextProvider>
       </QueryClientProviders>
     </BrowserRouter>
   </StrictMode>

@@ -19,8 +19,6 @@ const fetchDataFromDB = async (
 
       const all: allType = [];
 
-      console.log({ authMode: isAuthenticated ? 'userPools' : 'identityPool' });
-
       do {
         const { data, nextToken: nt } = await client.models[
           key as keyof typeof client.models

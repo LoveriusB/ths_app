@@ -1,7 +1,7 @@
 import { PropsWithChildren } from "react";
-import { TerminalInputsContextProvider } from "../contexts/TerminalInputsContext";
-import { FoldersContextProvider } from "../contexts/FoldersContext";
-import { WindowsContextProvider } from "../contexts/WindowsContext";
+import { TerminalInputsContextProvider } from "../contexts/terminalInputsContext.tsx/TerminalInputsProvider";
+import { FoldersContextProvider } from "../contexts/foldersContext/FoldersProvider";
+import { WindowsContextProvider } from "../contexts/windowsContext/WindowsProvider";
 export const TerminalContextWrappers = ({ children }: PropsWithChildren) => {
   return (
     <TerminalInputsContextProvider>

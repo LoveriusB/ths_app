@@ -1,11 +1,8 @@
-import { createContext, ReactNode, useState } from "react";
-import { Folder, FoldersContextInterface, rootFolder } from "../commons-utils";
-import { isEqual } from "lodash";
 import { Grid, Typography } from "@mui/material";
-
-export const FoldersContext = createContext<FoldersContextInterface | null>(
-  null
-);
+import { isEqual } from "lodash";
+import { ReactNode, useState } from "react";
+import { Folder, rootFolder } from "../../commons-utils";
+import { FoldersContext } from "./FoldersContext";
 
 export const FoldersContextProvider = ({
   children,

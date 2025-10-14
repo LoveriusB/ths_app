@@ -14,7 +14,7 @@ import { RegistrationForm } from "./RegistrationForm";
 import { useState } from "react";
 import { recapSchema, validationSchema } from "./schema";
 import { ResponsiveDialog } from "../misc/ResponsiveDialog";
-import { useAmplify } from "../../../hooks/useAmplify";
+import { amplifyClient } from "../../../amplifyClient";
 
 export type FormValues = {
   team: string;
@@ -36,11 +36,11 @@ export type FormValues = {
 export const MAX_PLAYERS = 150;
 export const RegisterDialog: React.FC<DialogProps> = ({ open, onClose }) => {
   const [activeStep, setActiveStep] = useState(0);
-
-  const client = useAmplify();
   const isSessionValid = (
-    session: Awaited<ReturnType<typeof client.queries.makeStripePayment>>
-  ): session is Awaited<ReturnType<typeof client.queries.makeStripePayment>> & {
+    session: Awaited<ReturnType<typeof amplifyClient.queries.makeStripePayment>>
+  ): session is Awaited<
+    ReturnType<typeof amplifyClient.queries.makeStripePayment>
+  > & {
     data: { id: string };
   } => {
     if (isNilOrEmpty(session.data) || isNilOrEmpty(session.data.id)) {
@@ -66,7 +66,7 @@ export const RegisterDialog: React.FC<DialogProps> = ({ open, onClose }) => {
 
   const startPaymentProcess = async (values: FormValues) => {
     const stripe = await getStripe();
-    const session = await client.queries.makeStripePayment(values, {
+    const session = await amplifyClient.queries.makeStripePayment(values, {
       authMode: "identityPool",
     });
     if (!isSessionValid(session)) {
