@@ -43,6 +43,10 @@ export const UserContextProvider = ({ children }: { children: ReactNode }) => {
 
   const adminConfirmSignIn = async (input: ConfirmSignInInput) => {
     const result: ConfirmSignInOutput = await confirmSignIn(input);
+    if (result.isSignedIn) {
+      const result = await getAuthUser();
+      setUser(result);
+    }
     return result;
   };
 
