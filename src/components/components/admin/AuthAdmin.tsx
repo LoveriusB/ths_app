@@ -2,7 +2,7 @@ import { Button, Grid } from "@mui/material";
 import { useUser } from "../../../hooks/useUser";
 import { BottomDrawer } from "../home/presentation/BottomDrawer";
 import { TopDrawer } from "../home/presentation/TopDrawer";
-import { PlayersLists } from "../misc/PlayersLists";
+import { AdminMailReminder } from "./adminMailReminder/AdminMailReminder";
 
 export const AuthAdmin = () => {
   const { adminSignOut } = useUser();
@@ -12,7 +12,7 @@ export const AuthAdmin = () => {
       <TopDrawer />
       <Grid width={"100%"} container alignItems={"center"} direction={"column"}>
         <Button onClick={() => adminSignOut({ global: true })}>Sign Out</Button>
-        <PlayersLists margin={0} />
+        <AdminMailReminder />
       </Grid>
       <Grid sx={{ mt: "auto", width: "100%" }}>
         <BottomDrawer />

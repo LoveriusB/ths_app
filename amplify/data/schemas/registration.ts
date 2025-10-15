@@ -1,72 +1,54 @@
-import { a } from '@aws-amplify/backend';
+import { a } from "@aws-amplify/backend";
 
 export const registrationSchema = a
   .model({
     id: a
       .id()
       .authorization((allow) => [
-        allow.authenticated().to(['read']),
-        allow.guest().to(['read']),
-      ]),
-    firstName: a
-      .string()
-      .authorization((allow) => [allow.authenticated().to(['read'])]),
+        allow.guest().to(["read"]),
+        allow.authenticated().to(["read", "update"]),
+      ])
+      .required(),
+    firstName: a.string(),
     // NOK
-    lastName: a
-      .string()
-      .authorization((allow) => [allow.authenticated().to(['read'])]),
+    lastName: a.string(),
     // NOK
-    email: a
-      .email()
-      .authorization((allow) => [allow.authenticated().to(['read'])]),
+    email: a.email(),
     // NOK
-    age: a
-      .float()
-      .authorization((allow) => [allow.authenticated().to(['read'])]),
+    age: a.float(),
 
     callSign: a
       .string()
       .authorization((allow) => [
-        allow.guest().to(['read']),
-        allow.authenticated().to(['read']),
+        allow.guest().to(["read"]),
+        allow.authenticated().to(["read", "update"]),
       ])
       .required(),
     team: a
       .string()
       .authorization((allow) => [
-        allow.guest().to(['read']),
-        allow.authenticated().to(['read']),
+        allow.guest().to(["read"]),
+        allow.authenticated().to(["read", "update"]),
       ])
       .required(),
     // NOK
-    stripePaymentStatus: a
-      .ref('stripePaymentStatus')
-      .authorization((allow) => [allow.authenticated().to(['read'])]),
+    stripePaymentStatus: a.ref("stripePaymentStatus"),
     // NOK
-    amountTotalCents: a
-      .float()
-      .authorization((allow) => [allow.authenticated().to(['read'])]),
+    amountTotalCents: a.float(),
 
-    mailSent: a
-      .boolean()
-      .default(false)
-      .authorization((allow) => [allow.authenticated().to(['read'])]),
+    mailSent: a.boolean().default(false),
     // NOK
     orga: a
       .boolean()
       .default(false)
       .authorization((allow) => [
-        allow.guest().to(['read']),
-        allow.authenticated().to(['read']),
+        allow.guest().to(["read"]),
+        allow.authenticated().to(["read", "update"]),
       ])
       .required(),
 
-    createdAt: a
-      .datetime()
-      .authorization((allow) => [allow.authenticated().to(['read'])]),
-    updatedAt: a
-      .datetime()
-      .authorization((allow) => [allow.authenticated().to(['read'])]),
+    createdAt: a.datetime(),
+    updatedAt: a.datetime(),
   })
   // Niveau modèle : pas de guest ici
-  .authorization((allow) => [allow.authenticated().to(['read'])]);
+  .authorization((allow) => [allow.authenticated().to(["read", "update"])]);

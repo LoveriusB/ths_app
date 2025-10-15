@@ -6,6 +6,7 @@ import {
   RegistrationContextActions,
   registrationContextReducer,
 } from "./RegistrationContext";
+import { amplifyClient } from "../../amplifyClient";
 
 export const RegistrationContextProvider = ({
   children,
@@ -43,6 +44,23 @@ export const RegistrationContextProvider = ({
     return state.registration.filter((item) => item.orga).length;
   };
 
+  const updateMailSent = async (id: string) => {
+    const item = getItem(id);
+    if (!item) {
+      console.warn("Item not found in updateMailSent");
+      return;
+    }
+    item.mailSent = true;
+    dispatch({
+      type: RegistrationContextActions.SET_REGISTRATION_CONTEXT,
+      payload: state.registration,
+    });
+
+    await amplifyClient.models.registration.update(item, {
+      authMode: "userPool",
+    });
+  };
+
   /**
    * This should avoid a change on every render.
    * Those values shall be changed ONLY if the state changes.
@@ -53,6 +71,7 @@ export const RegistrationContextProvider = ({
       ...state,
       getItem,
       getAmountOfOrgaRegistration,
+      updateMailSent,
     }),
     // let's not reset value each render...
     // eslint-disable-next-line react-hooks/exhaustive-deps

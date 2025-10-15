@@ -26,6 +26,13 @@ export interface RegistrationContext {
    * Get the amount of registrations with orga = true
    */
   getAmountOfOrgaRegistration: () => number;
+
+  /**
+   * When the mail is sent, this function is called to set mailSent to true
+   * @param id the id of the registration
+   * @returns Nothin
+   */
+  updateMailSent: (id: string) => Promise<void>;
 }
 
 type Action =
