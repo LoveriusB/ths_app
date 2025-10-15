@@ -3,7 +3,7 @@ import { Schema } from "../../data/resource";
 
 const stripe = new Stripe(process.env.STRIP_SECRET_KEY ?? "");
 
-export const EVENT_PRICE = 125; // Euros
+export const EVENT_PRICE = 0.5; // Euros
 
 export const createStripeSession = async (
   amount: number,
