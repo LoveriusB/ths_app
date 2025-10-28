@@ -27,8 +27,7 @@ export const HomeButtonRow: React.FC<HomeButtonRowProps> = ({
           fullWidth={isXs}
           disabled={registration.length - getAmountOfOrgaRegistration() >= 150}
         >
-          Inscriptions : {registration.length - getAmountOfOrgaRegistration()} /
-          150
+          Inscription
         </Button>
       </Grid>
       <Grid size={{ xs: 6 }} height={"100%"} container alignContent={"center"}>
@@ -36,7 +35,6 @@ export const HomeButtonRow: React.FC<HomeButtonRowProps> = ({
           onClick={() => setSocialNetworkOpen(true)}
           variant="contained"
           size="large"
-          {...(!isXs ? { sx: { minWidth: 285 } } : {})}
           fullWidth={isXs}
         >
           Nos réseaux
