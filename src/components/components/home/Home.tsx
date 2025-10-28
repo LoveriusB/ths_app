@@ -2,7 +2,7 @@ import { Grid } from "@mui/material";
 import { useState } from "react";
 import { RegisterDialog } from "../registrationForm/RegisterDialog";
 // import { useContextLoader } from '@ths-monorepo/shared-react-resources';
-import { PlayersLists } from "../misc/PlayersLists";
+// import { PlayersLists } from "../misc/PlayersLists";
 import { SocialNetworks } from "../SocialNetworks";
 import { BottomDrawer } from "./presentation/BottomDrawer";
 import { HomeButtonRow } from "./presentation/Home/ButtonRow";
@@ -49,7 +49,7 @@ export const Home: React.FC<HomeProps> = () => {
           setSocialNetworkOpen={setSocialNetworkOpen}
         />
       </Grid>
-      <PlayersLists />
+      {/* <PlayersLists /> */}
       <Grid sx={{ mt: "auto", width: "100%" }}>
         <BottomDrawer />
       </Grid>
