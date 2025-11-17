@@ -1,11 +1,6 @@
-import { FC } from 'react';
-import { ResponsiveDialog } from './misc/ResponsiveDialog';
-import {
-  Button,
-  DialogActions,
-  DialogContent,
-  DialogTitle,
-} from '@mui/material';
+import { FC } from "react";
+import { ResponsiveDialog } from "./misc/ResponsiveDialog";
+import { Button, DialogActions, DialogContent, DialogTitle } from "@mui/material";
 
 interface SocialNetworksProps {
   open: boolean;
@@ -17,20 +12,10 @@ export const SocialNetworks: FC<SocialNetworksProps> = ({ onClose, open }) => {
     <ResponsiveDialog open={open} onClose={onClose}>
       <DialogTitle>Nos réseaux sociaux</DialogTitle>
       <DialogContent dividers>
-        <Button
-          fullWidth
-          variant="discord"
-          href="https://discord.gg/HVtVHXksuP"
-          target="_blank"
-        >
+        <Button fullWidth variant="discord" href="https://discord.gg/Sb9HeT6Uca" target="_blank">
           Discord
         </Button>
-        <Button
-          fullWidth
-          variant="youtube"
-          href="https://www.youtube.com/@THS-airsoft"
-          target="_blank"
-        >
+        <Button fullWidth variant="youtube" href="https://www.youtube.com/@THS-airsoft" target="_blank">
           Youtube
         </Button>
         <Button
