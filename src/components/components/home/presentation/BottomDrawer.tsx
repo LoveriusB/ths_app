@@ -39,31 +39,17 @@ export const BottomDrawer: React.FC<BottomDrawerProps> = () => {
           <Grid width={"80%"}>
             <NoRefundButton buttonProps={{ fullWidth: true }} />
           </Grid>
-          <Typography
-            component={"p"}
-            variant="subtitle2"
-            color="grey.700"
-            textAlign={"center"}
-          >
+          <Typography component={"p"} variant="subtitle2" color="grey.700" textAlign={"center"}>
             MAJ V2.0.1 : 15/10/2025
           </Typography>
         </Grid>
 
         <Divider orientation="vertical" />
 
-        <Grid
-          size={{ xs: 4, sm: 5, md: 5.5, lg: 3, xl: 3 }}
-          container
-          justifyContent="center"
-          alignItems={"center"}
-        >
+        <Grid size={{ xs: 4, sm: 5, md: 5.5, lg: 3, xl: 3 }} container justifyContent="center" alignItems={"center"}>
           <Typography variant="h4">Suivez-nous</Typography>
           <Grid size={{ xs: 12 }} container justifyContent="center">
-            <IconButton
-              color="inherit"
-              href="https://discord.gg/HVtVHXksuP"
-              target="_blank"
-            >
+            <IconButton color="inherit" href="https://discord.gg/Sb9HeT6Uca" target="_blank">
               <DiscordIcon />
             </IconButton>
             <IconButton
@@ -88,27 +74,15 @@ export const BottomDrawer: React.FC<BottomDrawerProps> = () => {
                 }}
               />
             </IconButton>
-            <IconButton
-              color="inherit"
-              href="https://www.facebook.com/profile.php?id=61574878091138"
-              target="_blank"
-            >
+            <IconButton color="inherit" href="https://www.facebook.com/profile.php?id=61574878091138" target="_blank">
               <Facebook sx={{ color: "#0862f6" }} />
             </IconButton>
           </Grid>
         </Grid>
         {!isXs && !isSmall && !isMd && <Divider orientation="vertical" />}
-        <Grid
-          size={{ xs: 12, sm: 12, md: 12, lg: 4, xl: 4 }}
-          container
-          justifyContent={"space-around"}
-        >
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 4, xl: 4 }} container justifyContent={"space-around"}>
           <Grid size={{ xs: 4, sm: 5.5, md: 6, lg: 4, xl: 4 }} padding={4}>
-            <img
-              src={THSPatch}
-              alt="THS Patch"
-              style={{ maxHeight: 150, height: "auto" }}
-            />
+            <img src={THSPatch} alt="THS Patch" style={{ maxHeight: 150, height: "auto" }} />
           </Grid>
           <Grid
             size={{ xs: 7, sm: 5.5, md: 6, lg: 8, xl: 8 }}
@@ -126,23 +100,11 @@ export const BottomDrawer: React.FC<BottomDrawerProps> = () => {
             <Typography component={"p"} variant="copyright" color="grey.500">
               - Belgique
             </Typography>
-            <Typography
-              component={"p"}
-              variant="copyright"
-              color="grey.500"
-              sx={{ mr: 0.5 }}
-            >
+            <Typography component={"p"} variant="copyright" color="grey.500" sx={{ mr: 0.5 }}>
               - Made with
-              <FavoriteIcon
-                fontSize="small"
-                color="primary"
-                sx={{ margin: "0 0.5rem" }}
-              />
+              <FavoriteIcon fontSize="small" color="primary" sx={{ margin: "0 0.5rem" }} />
               by THS - Copy{" "}
-              <a
-                href="mailto:brun@loveri.us"
-                style={{ textDecoration: "none", color: "inherit" }}
-              >
+              <a href="mailto:brun@loveri.us" style={{ textDecoration: "none", color: "inherit" }}>
                 brun@loveri.us
               </a>
             </Typography>
