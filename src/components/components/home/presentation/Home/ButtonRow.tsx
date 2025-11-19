@@ -6,16 +6,10 @@ interface HomeButtonRowProps {
   setSocialNetworkOpen: (open: boolean) => void;
 }
 
-export const HomeButtonRow: React.FC<HomeButtonRowProps> = ({
-  setRegisterOpen,
-  setSocialNetworkOpen,
-}) => {
+export const HomeButtonRow: React.FC<HomeButtonRowProps> = ({ setRegisterOpen, setSocialNetworkOpen }) => {
   const theme = useTheme();
   const isXs = useMediaQuery(theme.breakpoints.only("xs"));
-  const {
-    registration,
-    getAmountOfOrgaRegistration,
-  } = useRegistrationContext();
+  const { registration, getAmountOfOrgaRegistration } = useRegistrationContext();
 
   return (
     <Grid container size={{ xs: 11.5 }} spacing={2}>
@@ -27,7 +21,7 @@ export const HomeButtonRow: React.FC<HomeButtonRowProps> = ({
           fullWidth={isXs}
           disabled={registration.length - getAmountOfOrgaRegistration() >= 150}
         >
-          Inscription
+          Inscriptions : {registration.length - getAmountOfOrgaRegistration()} / 150
         </Button>
       </Grid>
       <Grid size={{ xs: 6 }} height={"100%"} container alignContent={"center"}>
@@ -36,6 +30,7 @@ export const HomeButtonRow: React.FC<HomeButtonRowProps> = ({
           variant="contained"
           size="large"
           fullWidth={isXs}
+          {...(!isXs ? { sx: { minWidth: 285 } } : {})}
         >
           Nos réseaux
         </Button>

@@ -12,6 +12,7 @@ import { HomeInfo } from "./presentation/Home/HomeInfo";
 import { HomeRules } from "./presentation/Home/HomeRules";
 import { Sponsors } from "./presentation/Sponsors";
 import { TopDrawer } from "./presentation/TopDrawer";
+import { PlayersLists } from "../misc/PlayersLists";
 
 export interface HomeProps {
   [key: string]: string;
@@ -24,14 +25,8 @@ export const Home: React.FC<HomeProps> = () => {
   return (
     <Grid container minHeight={"100vh"}>
       <TopDrawer />
-      <RegisterDialog
-        open={registerOpen}
-        onClose={() => setRegisterOpen(false)}
-      />
-      <SocialNetworks
-        open={socialNetworkOpen}
-        onClose={() => setSocialNetworkOpen(false)}
-      />
+      <RegisterDialog open={registerOpen} onClose={() => setRegisterOpen(false)} />
+      <SocialNetworks open={socialNetworkOpen} onClose={() => setSocialNetworkOpen(false)} />
       <Sponsors />
       <Grid container spacing={2} justifyContent={"center"}>
         <Grid container size={{ xs: 12 }} justifyContent={"center"}>
@@ -44,12 +39,9 @@ export const Home: React.FC<HomeProps> = () => {
         </Grid>
       </Grid>
       <Grid container size={{ xs: 12 }} justifyContent={"center"} mt={2}>
-        <HomeButtonRow
-          setRegisterOpen={setRegisterOpen}
-          setSocialNetworkOpen={setSocialNetworkOpen}
-        />
+        <HomeButtonRow setRegisterOpen={setRegisterOpen} setSocialNetworkOpen={setSocialNetworkOpen} />
       </Grid>
-      {/* <PlayersLists /> */}
+      <PlayersLists />
       <Grid sx={{ mt: "auto", width: "100%" }}>
         <BottomDrawer />
       </Grid>
