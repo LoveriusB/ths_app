@@ -21,27 +21,16 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import EmailIcon from "@mui/icons-material/Email";
 import { CustomCheckedIcon, CustomIcon } from "../../misc/CustomCheckbox";
 
-const not = (
-  a: Schema["registration"]["type"][],
-  b: Schema["registration"]["type"][]
-) => {
+const not = (a: Schema["registration"]["type"][], b: Schema["registration"]["type"][]) => {
   return a.filter((value) => !b.includes(value));
 };
 
 export const AdminMailReminder = () => {
   const { registration, updateMailSent } = useRegistrationContext();
-  const [leftChecked, setLeftChecked] = useState<
-    Schema["registration"]["type"][]
-  >([]);
-  const [rightChecked, setRightChecked] = useState<
-    Schema["registration"]["type"][]
-  >([]);
-  const [mailSent, setMailSent] = useState<Schema["registration"]["type"][]>(
-    []
-  );
-  const [mailNotSent, setMailNotSent] = useState<
-    Schema["registration"]["type"][]
-  >([]);
+  const [leftChecked, setLeftChecked] = useState<Schema["registration"]["type"][]>([]);
+  const [rightChecked, setRightChecked] = useState<Schema["registration"]["type"][]>([]);
+  const [mailSent, setMailSent] = useState<Schema["registration"]["type"][]>([]);
+  const [mailNotSent, setMailNotSent] = useState<Schema["registration"]["type"][]>([]);
 
   useEffect(() => {
     setMailSent(registration.filter((reg) => reg.mailSent));
@@ -66,12 +55,7 @@ export const AdminMailReminder = () => {
 
   return (
     <>
-      <Grid
-        container
-        spacing={2}
-        sx={{ justifyContent: "center", alignItems: "center" }}
-        margin={4}
-      >
+      <Grid container spacing={2} sx={{ justifyContent: "center", alignItems: "center" }} margin={4}>
         <Paper sx={{ p: 2, height: "100%", minWidth: 500 }}>
           <Typography variant="h5">Mail not sent</Typography>
           <Divider />
@@ -83,9 +67,7 @@ export const AdminMailReminder = () => {
                   checked={leftChecked.includes(reg)}
                   onChange={() => {
                     leftChecked.includes(reg)
-                      ? setLeftChecked((prev) =>
-                          prev.filter((item) => item.id !== reg.id)
-                        )
+                      ? setLeftChecked((prev) => prev.filter((item) => item.id !== reg.id))
                       : setLeftChecked((prev) => [...prev, reg]);
                   }}
                   icon={<CustomIcon />}
@@ -102,7 +84,7 @@ export const AdminMailReminder = () => {
                   </Grid>
                 </IconButton>
                 <ListItemText
-                  primary={`${reg.firstName} ${reg.lastName}`}
+                  primary={`${reg.firstName} ${reg.lastName} (${reg.team} / ${reg.callSign})`}
                   secondary={reg.email}
                 />
               </ListItem>
@@ -147,9 +129,7 @@ export const AdminMailReminder = () => {
                     checked={rightChecked.includes(reg)}
                     onChange={() => {
                       rightChecked.includes(reg)
-                        ? setRightChecked((prev) =>
-                            prev.filter((item) => item.id !== reg.id)
-                          )
+                        ? setRightChecked((prev) => prev.filter((item) => item.id !== reg.id))
                         : setRightChecked((prev) => [...prev, reg]);
                     }}
                     icon={<CustomIcon />}
@@ -167,7 +147,7 @@ export const AdminMailReminder = () => {
                   </Grid>
                 </IconButton>
                 <ListItemText
-                  primary={`${reg.firstName} ${reg.lastName}`}
+                  primary={`${reg.firstName} ${reg.lastName} (${reg.team} / ${reg.callSign})`}
                   secondary={reg.email}
                 />
               </ListItem>
