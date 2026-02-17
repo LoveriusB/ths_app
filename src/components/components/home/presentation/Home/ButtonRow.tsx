@@ -21,7 +21,7 @@ export const HomeButtonRow: React.FC<HomeButtonRowProps> = ({ setRegisterOpen, s
           fullWidth={isXs}
           disabled={registration.length - getAmountOfOrgaRegistration() >= 150}
         >
-          Inscriptions : {registration.length - getAmountOfOrgaRegistration()} / 150
+          Inscriptions : {registration.length - getAmountOfOrgaRegistration()} / 100
         </Button>
       </Grid>
       <Grid size={{ xs: 6 }} height={"100%"} container alignContent={"center"}>
