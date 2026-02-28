@@ -5,18 +5,11 @@ export interface PersonRegistrationProps {
   prefix: string;
 }
 
-export const PersonRegistration: React.FC<PersonRegistrationProps> = ({
-  prefix,
-}) => {
+export const PersonRegistration: React.FC<PersonRegistrationProps> = ({ prefix }) => {
   return (
-    <Grid
-      container
-      spacing={2}
-      justifyContent={"space-around"}
-      flexDirection="column"
-    >
+    <Grid container spacing={2} justifyContent={"space-around"} flexDirection="column">
       <TextDetailEditable label="Email" name={`${prefix}.email`} />
-      <TextDetailEditable label="Call sign" name={`${prefix}.callSign`} />
+      <TextDetailEditable label="Surnom" name={`${prefix}.callSign`} />
       <TextDetailEditable label="Prénom" name={`${prefix}.firstName`} />
       <TextDetailEditable label="Nom" name={`${prefix}.lastName`} />
       <TextDetailEditable type="number" label="Âge" name={`${prefix}.age`} />
