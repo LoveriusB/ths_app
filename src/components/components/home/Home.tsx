@@ -13,6 +13,7 @@ import { HomeRules } from "./presentation/Home/HomeRules";
 import { Sponsors } from "./presentation/Sponsors";
 import { TopDrawer } from "./presentation/TopDrawer";
 import { PlayersLists } from "../misc/PlayersLists";
+import ThsHydraUrcoHero from "./presentation/op_script/ThsHydraUrco";
 
 export interface HomeProps {
   [key: string]: string;
@@ -37,6 +38,9 @@ export const Home: React.FC<HomeProps> = () => {
           <HomeAddedValue />
           <HomeDisclaimer />
         </Grid>
+      </Grid>
+      <Grid container spacing={2} justifyContent={"center"}>
+        <ThsHydraUrcoHero />
       </Grid>
       <Grid container size={{ xs: 12 }} justifyContent={"center"} mt={2}>
         <HomeButtonRow setRegisterOpen={setRegisterOpen} setSocialNetworkOpen={setSocialNetworkOpen} />
