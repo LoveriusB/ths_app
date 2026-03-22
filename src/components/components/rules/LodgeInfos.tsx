@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Dialog, DialogContent, IconButton, Typography, Stack, Box, Divider, Button, Chip } from "@mui/material";
+import { DialogContent, IconButton, Typography, Stack, Box, Divider, Button, Chip } from "@mui/material";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import BedRoundedIcon from "@mui/icons-material/BedRounded";
 import BreakfastDiningRoundedIcon from "@mui/icons-material/BreakfastDiningRounded";
