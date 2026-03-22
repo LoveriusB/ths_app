@@ -53,11 +53,6 @@ const data = {
       ],
       actionButton: <LodgeInfos />,
     },
-    // {
-    //   icon: <BedtimeOutlinedIcon color="primary" />,
-    //   texts: ["Un gîte est disponible sur place à la location, sur demande auprès de l'organisation."],
-    //   actionButton: <LodgeInfos />,
-    // },
   ],
 };
 

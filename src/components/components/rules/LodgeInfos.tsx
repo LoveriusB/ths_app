@@ -7,6 +7,7 @@ import HikingRoundedIcon from "@mui/icons-material/HikingRounded";
 import PaymentsRoundedIcon from "@mui/icons-material/PaymentsRounded";
 import InfoRoundedIcon from "@mui/icons-material/InfoRounded";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
+import { ResponsiveDialog } from "../misc/ResponsiveDialog";
 
 export const LodgeInfos = () => {
   const [open, setOpen] = useState(false);
@@ -20,19 +21,7 @@ export const LodgeInfos = () => {
         Voir les infos du gîte
       </Button>
 
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        maxWidth="md"
-        fullWidth
-        PaperProps={{
-          sx: {
-            borderRadius: 5,
-            overflow: "hidden",
-            backgroundImage: "none",
-          },
-        }}
-      >
+      <ResponsiveDialog open={open} onClose={handleClose} maxWidth="md" fullWidth>
         <Box
           sx={{
             position: "relative",
@@ -173,7 +162,7 @@ export const LodgeInfos = () => {
             </Stack>
           </Stack>
         </DialogContent>
-      </Dialog>
+      </ResponsiveDialog>
     </>
   );
 };
