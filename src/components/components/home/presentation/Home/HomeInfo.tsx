@@ -6,6 +6,7 @@ import LocationPinIcon from "@mui/icons-material/LocationPin";
 import PetsIcon from "@mui/icons-material/PetsOutlined";
 
 import { Card } from "../Card/Card";
+import { LodgeInfos } from "../../../rules/LodgeInfos";
 
 export interface HomeInfoProps {
   [key: string]: string;
@@ -48,8 +49,15 @@ const data = {
       icon: <BedtimeOutlinedIcon color="primary" />,
       texts: [
         'Le logement se fait en "tente / van" personnel uniquement. La place étant limitée, merci de prévoir du matériel compact. Les grandes installations type tonnelle de 15 m² ne seront pas acceptées afin de laisser de la place à tous.',
+        "Un gîte est disponible sur place à la location, sur demande auprès de l'organisation.",
       ],
+      actionButton: <LodgeInfos />,
     },
+    // {
+    //   icon: <BedtimeOutlinedIcon color="primary" />,
+    //   texts: ["Un gîte est disponible sur place à la location, sur demande auprès de l'organisation."],
+    //   actionButton: <LodgeInfos />,
+    // },
   ],
 };
 

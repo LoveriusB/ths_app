@@ -28,15 +28,11 @@ const data = {
   cardListItems: [
     {
       icon: <RemoveRedEyeOutlinedIcon color="primary" />,
-      texts: [
-        "Protection oculaire obligatoire : elle doit être portée en continu dès l'entrée sur le terrain.",
-      ],
+      texts: ["Protection oculaire obligatoire : elle doit être portée en continu dès l'entrée sur le terrain."],
     },
     {
       icon: <GrassIcon color="primary" />,
-      texts: [
-        "Billes bio uniquement : Nous imposons un respect du site et de l'environnement.",
-      ],
+      texts: ["Billes bio uniquement : Nous imposons un respect du site et de l'environnement."],
     },
     {
       icon: <SpeedIcon color="primary" />,
@@ -45,15 +41,11 @@ const data = {
     },
     {
       icon: <HandshakeOutlinedIcon color="primary" />,
-      texts: [
-        "Fair-play absolu : chaque touche doit être annoncée honnêtement.",
-      ],
+      texts: ["Fair-play absolu : chaque touche doit être annoncée honnêtement."],
     },
     {
       icon: <BackpackOutlinedIcon color="primary" />,
-      texts: [
-        "Équipement adapté : prévoyez chargeurs, batteries et tenues prêtes à tenir sur la durée.",
-      ],
+      texts: ["Équipement adapté : prévoyez chargeurs, batteries et tenues prêtes à tenir sur la durée."],
     },
     {
       icon: <CampaignOutlinedIcon color="primary" />,
