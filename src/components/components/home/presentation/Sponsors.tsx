@@ -6,6 +6,7 @@ import { ProtectOrSaveSponsor } from "./sponsors/ProtecteOrSaveSponsor";
 import { TheShootingBarSponsor } from "./sponsors/TheSHootingBar";
 import { TheUnitSponsor } from "./sponsors/TheUnitSponsor";
 import { DeltaArmory } from "./sponsors/DeltaArmory";
+import { RhumSponsor } from "./sponsors/RhumSponsor";
 
 export interface SponsorsProps {
   [key: string]: string;
@@ -38,6 +39,7 @@ export const Sponsors: React.FC<SponsorsProps> = () => {
               <OwledgeSponsor />
               <TheShootingBarSponsor />
               <ABZAVSponsor />
+              <RhumSponsor />
             </Grid>
           </Grid>
         </Paper>

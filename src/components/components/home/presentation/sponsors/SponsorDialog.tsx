@@ -76,15 +76,7 @@ const FloatingCard = styled(Card)(({ theme }) => ({
 // -----------------------------
 // Dialog Component
 // -----------------------------
-export function SponsorDialog({
-  open,
-  onClose,
-  info,
-}: {
-  open: boolean;
-  onClose: () => void;
-  info: UnitSponsorInfo;
-}) {
+export function SponsorDialog({ open, onClose, info }: { open: boolean; onClose: () => void; info: UnitSponsorInfo }) {
   return (
     <ResponsiveDialog
       open={open}
@@ -106,18 +98,14 @@ export function SponsorDialog({
 
           {/* Floating identity card */}
           <Box px={3}>
-            <FloatingCard>
+            <FloatingCard sx={{ p: 2 }}>
               <CardContent>
                 <Stack
                   direction={{ xs: "column", sm: "row" }}
                   spacing={2}
                   alignItems={{ xs: "center", sm: "flex-start" }}
                 >
-                  <Avatar
-                    src={info.logoUrl}
-                    alt={info.name}
-                    sx={{ width: 72, height: 72 }}
-                  />
+                  <Avatar src={info.logoUrl} alt={info.name} sx={{ width: 72, height: 72 }} />
                   <Box flex={1} textAlign={{ xs: "center", sm: "left" }}>
                     <Stack
                       direction="row"
@@ -133,11 +121,7 @@ export function SponsorDialog({
                       </Tooltip>
                     </Stack>
                     {info.tagline && (
-                      <Typography
-                        variant="body2"
-                        color="text.secondary"
-                        mt={0.5}
-                      >
+                      <Typography variant="body2" color="text.secondary" mt={0.5}>
                         {info.tagline}
                       </Typography>
                     )}
@@ -150,25 +134,10 @@ export function SponsorDialog({
                       justifyContent={{ xs: "center", sm: "flex-start" }}
                       flexWrap="wrap"
                     >
-                      <Chip
-                        icon={<WorkspacePremiumIcon />}
-                        label="Sponsor officiel"
-                        size="small"
-                        color="warning"
-                      />
-                      <Chip
-                        icon={<MilitaryTechIcon />}
-                        label="OP partenaire"
-                        size="small"
-                        color="warning"
-                      />
+                      <Chip icon={<WorkspacePremiumIcon />} label="Sponsor officiel" size="small" color="warning" />
+                      <Chip icon={<MilitaryTechIcon />} label="OP partenaire" size="small" color="warning" />
                       {info.locationLabel && (
-                        <Chip
-                          icon={<LocationOnIcon />}
-                          label={info.locationLabel}
-                          size="small"
-                          color="warning"
-                        />
+                        <Chip icon={<LocationOnIcon />} label={info.locationLabel} size="small" color="warning" />
                       )}
                     </Grid>
                   </Box>
@@ -185,13 +154,7 @@ export function SponsorDialog({
           </Typography>
 
           {/* Highlights */}
-          <Stack
-            direction="row"
-            spacing={1}
-            useFlexGap
-            flexWrap="wrap"
-            sx={{ mb: 3 }}
-          >
+          <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap" sx={{ mb: 3 }}>
             {info.highlights.map((h, i) => (
               <Chip color="info" key={i} label={h} variant="outlined" />
             ))}
@@ -202,12 +165,7 @@ export function SponsorDialog({
           {/* Prizes */}
           {info.prizes && info.prizes.length > 0 && (
             <Box>
-              <Stack
-                direction="row"
-                alignItems="center"
-                spacing={1}
-                sx={{ mb: 1 }}
-              >
+              <Stack direction="row" alignItems="center" spacing={1} sx={{ mb: 1 }}>
                 <EventIcon />
                 <Typography variant="h6" fontWeight={700}>
                   Lots à gagner pendant l'événement
@@ -216,36 +174,13 @@ export function SponsorDialog({
               <Grid container spacing={2}>
                 {info.prizes.map((p, idx) => (
                   <Grid size={{ xs: 12 }} key={idx}>
-                    <Card
-                      variant="outlined"
-                      sx={{ height: "100%", borderRadius: 2 }}
-                    >
+                    <Card variant="outlined" sx={{ height: "100%", borderRadius: 2 }}>
                       <CardContent>
-                        <Grid
-                          container
-                          size={{ xs: 12 }}
-                          justifyContent={"center"}
-                        >
-                          <Grid
-                            size={{ xs: 5 }}
-                            container
-                            flexDirection="column"
-                            justifyContent={"center"}
-                          >
+                        <Grid container size={{ xs: 12 }} justifyContent={"center"}>
+                          <Grid size={{ xs: 5 }} container flexDirection="column" justifyContent={"center"}>
                             <Typography fontWeight={700}>{p.title}</Typography>
-                            {p.subtitle && (
-                              <Typography color="textSecondary">
-                                {p.subtitle}
-                              </Typography>
-                            )}
-                            {p.valueHint && (
-                              <Chip
-                                label={p.valueHint}
-                                size="medium"
-                                color="info"
-                                sx={{ mt: 1 }}
-                              />
-                            )}
+                            {p.subtitle && <Typography color="textSecondary">{p.subtitle}</Typography>}
+                            {p.valueHint && <Chip label={p.valueHint} size="medium" color="info" sx={{ mt: 1 }} />}
                           </Grid>
                           <Grid container margin={"0 16px"}>
                             <Divider orientation="vertical" />
@@ -258,10 +193,7 @@ export function SponsorDialog({
                             flexDirection="column"
                             justifyContent={"center"}
                           >
-                            {p.chips &&
-                              p.chips.map((c, i) => (
-                                <Chip key={i} label={c} size="small" />
-                              ))}
+                            {p.chips && p.chips.map((c, i) => <Chip key={i} label={c} size="small" />)}
                           </Grid>
                         </Grid>
                       </CardContent>
@@ -274,11 +206,7 @@ export function SponsorDialog({
 
           {/* Legal notes */}
           {info.legalNotes && (
-            <Typography
-              variant="caption"
-              color="textSecondary"
-              sx={{ display: "block", mt: 2 }}
-            >
+            <Typography variant="caption" color="textSecondary" sx={{ display: "block", mt: 2 }}>
               {info.legalNotes}
             </Typography>
           )}
