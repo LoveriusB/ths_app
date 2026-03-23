@@ -2,15 +2,7 @@ import { Grid } from "@mui/material";
 
 import { Routes, Route } from "react-router-dom";
 import { useSelectedTheme } from "./hooks/useSelectedTheme";
-import {
-  Admin,
-  Cancel,
-  Home,
-  NotFound,
-  Success,
-  Terminal,
-  ThemeWrapper,
-} from "./components";
+import { Admin, Cancel, Home, NotFound, Success, Terminal, ThemeWrapper } from "./components";
 
 export const App = () => {
   const { selectedTheme } = useSelectedTheme();
@@ -21,6 +13,7 @@ export const App = () => {
           path="/"
           element={
             <ThemeWrapper theme={selectedTheme}>
+              {/* <CssBaseline /> */}
               <Home />
             </ThemeWrapper>
           }

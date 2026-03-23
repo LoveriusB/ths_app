@@ -98,7 +98,7 @@ export function SponsorDialog({ open, onClose, info }: { open: boolean; onClose:
 
           {/* Floating identity card */}
           <Box px={3}>
-            <FloatingCard sx={{ p: 2 }}>
+            <FloatingCard>
               <CardContent>
                 <Stack
                   direction={{ xs: "column", sm: "row" }}

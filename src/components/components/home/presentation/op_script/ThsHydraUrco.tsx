@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Chip, Grid, Stack, Typography, alpha, useTheme } from "@mui/material";
+import { Box, Card, CardContent, Chip, Grid, Stack, Typography, alpha, styled, useTheme } from "@mui/material";
 import urco from "../../../../SVG/URCO.svg";
 import hydra from "../../../../SVG/HYDRA.svg";
 import ShieldIcon from "@mui/icons-material/Shield";
@@ -30,6 +30,13 @@ const missionItems = [
 
 export default function ThsHydraUrcoHero() {
   const theme = useTheme();
+
+  const CustomCardContainer = styled(CardContent)(() => ({
+    paddingBottom: 0,
+    "&:last-child": {
+      paddingBottom: 0,
+    },
+  }));
 
   return (
     <Grid
@@ -142,7 +149,7 @@ export default function ThsHydraUrcoHero() {
                 boxShadow: "none",
               }}
             >
-              <CardContent sx={{ p: 0 }}>
+              <CustomCardContainer sx={{ p: 0, pb: 0 }}>
                 <Grid container>
                   <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
                     <Box
@@ -240,7 +247,7 @@ export default function ThsHydraUrcoHero() {
                     </Box>
                   </Grid>
                 </Grid>
-              </CardContent>
+              </CustomCardContainer>
             </Card>
 
             <Grid container spacing={2}>
@@ -251,7 +258,6 @@ export default function ThsHydraUrcoHero() {
                     <Card
                       sx={{
                         height: "100%",
-                        p: 2,
                         borderRadius: 4,
                         border: `1px solid ${alpha("#ffffff", 0.1)}`,
                         backgroundColor: alpha("#ffffff", 0.05),
