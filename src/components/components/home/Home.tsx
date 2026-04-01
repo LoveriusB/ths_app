@@ -29,6 +29,9 @@ export const Home: React.FC<HomeProps> = () => {
       <RegisterDialog open={registerOpen} onClose={() => setRegisterOpen(false)} />
       <SocialNetworks open={socialNetworkOpen} onClose={() => setSocialNetworkOpen(false)} />
       <Sponsors />
+      <Grid container spacing={2} justifyContent={"center"} marginBottom={2}>
+        <ThsHydraUrcoHero />
+      </Grid>
       <Grid container spacing={2} justifyContent={"center"}>
         <Grid container size={{ xs: 12 }} justifyContent={"center"}>
           <HomeInfo />
@@ -38,9 +41,6 @@ export const Home: React.FC<HomeProps> = () => {
           <HomeAddedValue />
           <HomeDisclaimer />
         </Grid>
-      </Grid>
-      <Grid container spacing={2} justifyContent={"center"}>
-        <ThsHydraUrcoHero />
       </Grid>
       <Grid container size={{ xs: 12 }} justifyContent={"center"} mt={2}>
         <HomeButtonRow setRegisterOpen={setRegisterOpen} setSocialNetworkOpen={setSocialNetworkOpen} />

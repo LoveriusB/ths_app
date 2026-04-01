@@ -14,7 +14,7 @@ export interface SponsorsProps {
 
 export const Sponsors: React.FC<SponsorsProps> = () => {
   return (
-    <Grid container justifyContent={"center"} width={"100%"} marginBottom={2}>
+    <Grid container justifyContent={"center"} width={"100%"}>
       <Grid size={{ xs: 11.5, sm: 11.5, md: 11, lg: 11, xl: 8 }}>
         <Paper variant="homePaper">
           <Grid container justifyContent={"center"} width={"100%"} padding={2}>
