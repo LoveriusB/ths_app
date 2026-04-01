@@ -52,11 +52,7 @@ export const BottomDrawer: React.FC<BottomDrawerProps> = () => {
             <IconButton color="inherit" href="https://discord.gg/Sb9HeT6Uca" target="_blank">
               <DiscordIcon />
             </IconButton>
-            <IconButton
-              color="inherit"
-              href="https://www.instagram.com/thehive.ths?igsh=aHprd2hsZDc0dnBh"
-              target="_blank"
-            >
+            <IconButton color="inherit" href="https://www.youtube.com/@THS-airsoft" target="_blank">
               <YouTube
                 sx={{
                   color: "#ff0000",
