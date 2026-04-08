@@ -14,7 +14,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import { capitalize, chunk, groupBy } from "lodash";
+import { capitalize, chunk, groupBy, isEmpty, sortBy } from "lodash";
 import { useState } from "react";
 import { Schema } from "../../../../amplify/backend";
 import { useRegistrationContext } from "../../../hooks/useRegistrationContext";
@@ -34,18 +34,29 @@ export const PlayersLists: React.FC<PlayersListsProps> = ({ margin }) => {
   const isSmall = useMediaQuery(theme.breakpoints.only("sm"));
   const isMd = useMediaQuery(theme.breakpoints.only("md"));
 
-  const registrationByTeam = groupBy(registration, "team");
-  const registrationByTeamChunked = Object.keys(registrationByTeam).reduce(
+  const registrationByTeam = groupBy(sortBy(registration, "team"), "team");
+  const THSTeam = registrationByTeam["THS Orga"] || [];
+  const otherTeams = Object.keys(registrationByTeam)
+    .filter((team) => team !== "THS Orga")
+    .reduce((acc, team) => {
+      acc[team] = registrationByTeam[team];
+      return acc;
+    }, {} as { [key: string]: typeof registration });
+  const sortedTeams = !isEmpty(otherTeams) ? { "THS Orga": [...THSTeam], ...otherTeams } : {};
+
+  const registrationByTeamChunked = Object.keys(sortedTeams).reduce(
     (acc, team) => {
       const chunkedMembers = chunk(
         registrationByTeam[team],
-        2 // 2 players per line or 3 on large screens
+        2, // 2 players per line or 3 on large screens
       );
       acc[team] = chunkedMembers;
       return acc;
     },
-    {} as { [key: string]: typeof registration[] } // specify the type of the accumulator
+    {} as { [key: string]: typeof registration[] }, // specify the type of the accumulator
   );
+
+  console.log("registrationByTeamChunked", registrationByTeamChunked);
 
   const chunk1: { [key: string]: typeof registration[] } = {};
   const chunk2: { [key: string]: typeof registration[] } = {};
@@ -68,10 +79,7 @@ export const PlayersLists: React.FC<PlayersListsProps> = ({ margin }) => {
   const list = [chunk1, chunk2, chunk3, chunk4];
 
   return (
-    <Grid
-      size={{ xs: 11.5, sm: 11.5, md: 11, lg: 11, xl: 8 }}
-      sx={{ margin: margin ?? "auto", mb: 4 }}
-    >
+    <Grid size={{ xs: 11.5, sm: 11.5, md: 11, lg: 11, xl: 8 }} sx={{ margin: margin ?? "auto", mb: 4 }}>
       <Paper variant="playerList">
         <Typography gutterBottom variant="h2">
           Liste des équipes inscrites avec leurs membres :
@@ -92,9 +100,7 @@ export const PlayersLists: React.FC<PlayersListsProps> = ({ margin }) => {
                   <Accordion
                     key={list[gridIndex][team][0][0].id}
                     disableGutters
-                    expanded={
-                      expanded.grindIdex === gridIndex && expanded.team === team
-                    }
+                    expanded={expanded.grindIdex === gridIndex && expanded.team === team}
                     onChange={() =>
                       setExpanded((prev) =>
                         prev.grindIdex === gridIndex && prev.team === team
@@ -102,7 +108,7 @@ export const PlayersLists: React.FC<PlayersListsProps> = ({ margin }) => {
                           : {
                               grindIdex: gridIndex,
                               team: team,
-                            }
+                            },
                       )
                     }
                   >
@@ -112,35 +118,19 @@ export const PlayersLists: React.FC<PlayersListsProps> = ({ margin }) => {
                     <AccordionDetails>
                       <Table>
                         <TableBody>
-                          {list[gridIndex][team].map(
-                            (
-                              players: Schema["registration"]["type"][],
-                              playerIndex
-                            ) => {
-                              const isLastRow =
-                                playerIndex ===
-                                list[gridIndex][team].length - 1;
+                          {list[gridIndex][team].map((players: Schema["registration"]["type"][], playerIndex) => {
+                            const isLastRow = playerIndex === list[gridIndex][team].length - 1;
 
-                              return (
-                                <TableRow key={players[0].id}>
-                                  {players.map((player) => (
-                                    <TableCell
-                                      key={player.id}
-                                      sx={
-                                        isLastRow
-                                          ? { borderBottom: "none" }
-                                          : {}
-                                      }
-                                    >
-                                      <ListItemText
-                                        primary={capitalize(player?.callSign)}
-                                      />
-                                    </TableCell>
-                                  ))}
-                                </TableRow>
-                              );
-                            }
-                          )}
+                            return (
+                              <TableRow key={players[0].id}>
+                                {players.map((player) => (
+                                  <TableCell key={player.id} sx={isLastRow ? { borderBottom: "none" } : {}}>
+                                    <ListItemText primary={capitalize(player?.callSign)} />
+                                  </TableCell>
+                                ))}
+                              </TableRow>
+                            );
+                          })}
                         </TableBody>
                       </Table>
                     </AccordionDetails>
