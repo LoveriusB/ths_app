@@ -7,7 +7,7 @@ const MAW_PLAYERS = 150;
 export const handler: Schema["makeStripePayment"]["functionHandler"] = async (
   event
 ) => {
-  return { id: "" };
+  return { id: "", error: "RegistrationsClosed" };
   console.log(JSON.stringify({ event }));
   const { playersCount, players, team } = event.arguments;
   if (playersCount === undefined || players === undefined) {
