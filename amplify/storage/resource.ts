@@ -9,5 +9,6 @@ export const storage = defineStorage({
   access: (allow) => ({
     "pictures/*": [allow.guest.to(["read"])],
     "videos/*": [allow.guest.to(["read"])],
+    "downloads/*": [allow.guest.to(["read"])],
   }),
 });
