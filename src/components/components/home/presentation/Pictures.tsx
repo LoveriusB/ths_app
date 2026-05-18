@@ -16,6 +16,7 @@ import {
 import { list, getUrl } from "aws-amplify/storage";
 import { ResponsiveDialog } from "../../misc/ResponsiveDialog";
 import { useEffect, useState } from "react";
+import { DownloadPicturesZipButton } from "./Download";
 
 interface PicturesProps {
   picturesOpen?: boolean;
@@ -90,7 +91,14 @@ export const Pictures: React.FC<PicturesProps> = ({ picturesOpen, onClose }) => 
 
   return (
     <ResponsiveDialog open={!!picturesOpen} onClose={() => onClose(false)}>
-      <DialogTitle>Photos de l'édition 2023</DialogTitle>
+      <DialogTitle>
+        <Grid container justifyContent={"space-between"}>
+          <Grid>Photos de l'édition 2023 </Grid>
+          <Grid>
+            <DownloadPicturesZipButton />
+          </Grid>
+        </Grid>
+      </DialogTitle>
       <DialogContent dividers>
         <Grid container padding={2} justifyContent={"center"} alignItems={"center"} flexDirection={"column"}>
           <Typography variant="caption">Elles seront disponibles après le tournoi !</Typography>
