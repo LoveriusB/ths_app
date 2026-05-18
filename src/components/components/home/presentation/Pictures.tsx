@@ -28,39 +28,6 @@ export type GalleryPhoto = {
   title: string;
 };
 
-const demoPhotos: GalleryPhoto[] = [
-  {
-    id: "1",
-    src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80",
-    title: "Golden Valley",
-  },
-  {
-    id: "2",
-    src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
-    title: "Ocean Mood",
-  },
-  {
-    id: "3",
-    src: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=1200&q=80",
-    title: "Forest Path",
-  },
-  {
-    id: "4",
-    src: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1200&q=80",
-    title: "Urban Lines",
-  },
-  {
-    id: "5",
-    src: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
-    title: "Mountain Air",
-  },
-  {
-    id: "6",
-    src: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=1200&q=80",
-    title: "Open Field",
-  },
-];
-
 export const Pictures: React.FC<PicturesProps> = ({ picturesOpen, onClose }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
@@ -119,7 +86,7 @@ export const Pictures: React.FC<PicturesProps> = ({ picturesOpen, onClose }) => 
     };
   }, []);
 
-  console.log("Photos chargées :", photos);
+  console.log("Photos chargées :", photos, laoding);
 
   return (
     <ResponsiveDialog open={!!picturesOpen} onClose={() => onClose(false)}>
