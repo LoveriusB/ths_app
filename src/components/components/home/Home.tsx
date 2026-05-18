@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import { useState } from "react";
-import { RegisterDialog } from "../registrationForm/RegisterDialog";
+// import { RegisterDialog } from "../registrationForm/RegisterDialog";
 // import { useContextLoader } from '@ths-monorepo/shared-react-resources';
 // import { PlayersLists } from "../misc/PlayersLists";
 import { SocialNetworks } from "../SocialNetworks";
