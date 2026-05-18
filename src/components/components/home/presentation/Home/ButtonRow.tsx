@@ -13,27 +13,29 @@ export const HomeButtonRow: React.FC<HomeButtonRowProps> = ({ setRegisterOpen, s
 
   return (
     <Grid container size={{ xs: 11.5 }} spacing={2}>
-      <Grid size={{ xs: 6 }} container justifyContent="flex-end">
-        <Button
-          onClick={() => setRegisterOpen(true)}
-          variant="contained"
-          size="large"
-          fullWidth={isXs}
-          disabled={registration.length - getAmountOfOrgaRegistration() >= 150}
-        >
-          Inscriptions : {registration.length - getAmountOfOrgaRegistration()} / 100
-        </Button>
-      </Grid>
-      <Grid size={{ xs: 6 }} height={"100%"} container alignContent={"center"}>
-        <Button
-          onClick={() => setSocialNetworkOpen(true)}
-          variant="contained"
-          size="large"
-          fullWidth={isXs}
-          {...(!isXs ? { sx: { minWidth: 285 } } : {})}
-        >
-          Nos réseaux
-        </Button>
+      <Grid container size={{ xs: 12 }}>
+        <Grid size={{ xs: 6 }} container justifyContent="flex-end">
+          <Button
+            onClick={() => setRegisterOpen(true)}
+            variant="contained"
+            size="large"
+            fullWidth={isXs}
+            disabled={registration.length - getAmountOfOrgaRegistration() >= 150}
+          >
+            Voir les photos
+          </Button>
+        </Grid>
+        <Grid size={{ xs: 6 }} height={"100%"} container alignContent={"center"}>
+          <Button
+            onClick={() => setSocialNetworkOpen(true)}
+            variant="contained"
+            size="large"
+            fullWidth={isXs}
+            {...(!isXs ? { sx: { minWidth: 285 } } : {})}
+          >
+            Nos réseaux
+          </Button>
+        </Grid>
       </Grid>
     </Grid>
   );

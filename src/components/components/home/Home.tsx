@@ -14,20 +14,23 @@ import { Sponsors } from "./presentation/Sponsors";
 import { TopDrawer } from "./presentation/TopDrawer";
 import { PlayersLists } from "../misc/PlayersLists";
 import ThsHydraUrcoHero from "./presentation/op_script/ThsHydraUrco";
+import { Pictures } from "./presentation/Pictures";
 
 export interface HomeProps {
   [key: string]: string;
 }
 
 export const Home: React.FC<HomeProps> = () => {
-  const [registerOpen, setRegisterOpen] = useState(false);
+  // const [registerOpen, setRegisterOpen] = useState(false);
+  const [picturesOpen, setPicturesOpen] = useState(false);
   const [socialNetworkOpen, setSocialNetworkOpen] = useState(false);
 
   return (
     <Grid container minHeight={"100vh"}>
       <TopDrawer />
-      <RegisterDialog open={registerOpen} onClose={() => setRegisterOpen(false)} />
+      {/* <RegisterDialog open={registerOpen} onClose={() => setRegisterOpen(false)} /> */}
       <SocialNetworks open={socialNetworkOpen} onClose={() => setSocialNetworkOpen(false)} />
+      <Pictures picturesOpen={picturesOpen} onClose={() => setPicturesOpen(false)} />
       <Sponsors />
       <Grid container spacing={2} justifyContent={"center"} marginBottom={2}>
         <ThsHydraUrcoHero />
@@ -43,7 +46,7 @@ export const Home: React.FC<HomeProps> = () => {
         </Grid>
       </Grid>
       <Grid container size={{ xs: 12 }} justifyContent={"center"} mt={2}>
-        <HomeButtonRow setRegisterOpen={setRegisterOpen} setSocialNetworkOpen={setSocialNetworkOpen} />
+        <HomeButtonRow setRegisterOpen={setPicturesOpen} setSocialNetworkOpen={setSocialNetworkOpen} />
       </Grid>
       <PlayersLists />
       <Grid sx={{ mt: "auto", width: "100%" }}>
