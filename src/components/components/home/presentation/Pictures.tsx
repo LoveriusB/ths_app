@@ -9,7 +9,6 @@ import {
   DialogContent,
   DialogTitle,
   Grid,
-  Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
@@ -30,14 +29,20 @@ export type GalleryPhoto = {
   title: string;
 };
 
-export const Pictures: React.FC<PicturesProps> = ({ picturesOpen, onClose }) => {
+export const Pictures: React.FC<PicturesProps> = ({
+  picturesOpen,
+  onClose,
+}) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const [laoding, setLoading] = useState(false);
   const [photos, setPhotos] = useState<GalleryPhoto[]>([]);
-  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
+  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(
+    null
+  );
 
-  const selectedPhoto = selectedPhotoIndex !== null ? photos[selectedPhotoIndex] : null;
+  const selectedPhoto =
+    selectedPhotoIndex !== null ? photos[selectedPhotoIndex] : null;
 
   const goToPreviousPhoto = () => {
     setSelectedPhotoIndex((currentIndex) => {
@@ -84,7 +89,7 @@ export const Pictures: React.FC<PicturesProps> = ({ picturesOpen, onClose }) => 
               src: url.toString(),
               title: item.path.split("/").pop() ?? "Photo",
             };
-          }),
+          })
         );
 
         if (!cancelled) {
@@ -120,16 +125,13 @@ export const Pictures: React.FC<PicturesProps> = ({ picturesOpen, onClose }) => 
       <ResponsiveDialog open={!!picturesOpen} onClose={() => onClose(false)}>
         <DialogTitle>
           <Grid container justifyContent={"space-between"}>
-            <Grid>Photos de l'édition 2023 </Grid>
+            <Grid>Photos de l'édition 2026 </Grid>
             <Grid>
               <DownloadPicturesZipButton />
             </Grid>
           </Grid>
         </DialogTitle>
         <DialogContent dividers>
-          <Grid container padding={2} justifyContent={"center"} alignItems={"center"} flexDirection={"column"}>
-            <Typography variant="caption">Elles seront disponibles après le tournoi !</Typography>
-          </Grid>
           <Container>
             <Box
               sx={{
@@ -157,7 +159,10 @@ export const Pictures: React.FC<PicturesProps> = ({ picturesOpen, onClose }) => 
                         sm: isLarge ? "span 2" : "span 1",
                       },
                       gridRow: { xs: isLarge ? "span 2" : "span 1" },
-                      boxShadow: `0 24px 80px ${alpha(theme.palette.common.black, 0.12)}`,
+                      boxShadow: `0 24px 80px ${alpha(
+                        theme.palette.common.black,
+                        0.12
+                      )}`,
                     }}
                   >
                     <CardActionArea
@@ -194,7 +199,7 @@ export const Pictures: React.FC<PicturesProps> = ({ picturesOpen, onClose }) => 
                           transition: "opacity 250ms ease",
                           background: `linear-gradient(180deg, transparent 20%, ${alpha(
                             theme.palette.common.black,
-                            0.82,
+                            0.82
                           )} 100%)`,
                           zIndex: 1,
                         }}
